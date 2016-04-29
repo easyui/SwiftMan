@@ -11,6 +11,7 @@
 		DD9778891CD3031500BA2076 /* SwiftMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97787E1CD3031500BA2076 /* SwiftMan.framework */; };
 		DD97788E1CD3031500BA2076 /* SwiftManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97788D1CD3031500BA2076 /* SwiftManTests.swift */; };
 		DDA2A85D1CD30E4100AAAB8C /* UIColor+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A85C1CD30E4100AAAB8C /* UIColor+Man.swift */; };
+		DDA2A86A1CD32E1700AAAB8C /* UIScreen+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8691CD32E1700AAAB8C /* UIScreen+Man.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		DD97788D1CD3031500BA2076 /* SwiftManTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftManTests.swift; sourceTree = "<group>"; };
 		DD97788F1CD3031500BA2076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDA2A85C1CD30E4100AAAB8C /* UIColor+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Man.swift"; sourceTree = "<group>"; };
+		DDA2A8691CD32E1700AAAB8C /* UIScreen+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Man.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 		DDA2A8561CD307C800AAAB8C /* UIScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DDA2A8691CD32E1700AAAB8C /* UIScreen+Man.swift */,
 			);
 			path = UIScreen;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA2A86A1CD32E1700AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDA2A85D1CD30E4100AAAB8C /* UIColor+Man.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
