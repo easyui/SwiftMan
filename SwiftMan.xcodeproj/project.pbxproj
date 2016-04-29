@@ -10,6 +10,7 @@
 		DD9778821CD3031500BA2076 /* SwiftMan.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9778811CD3031500BA2076 /* SwiftMan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD9778891CD3031500BA2076 /* SwiftMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97787E1CD3031500BA2076 /* SwiftMan.framework */; };
 		DD97788E1CD3031500BA2076 /* SwiftManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97788D1CD3031500BA2076 /* SwiftManTests.swift */; };
+		DDA2A85D1CD30E4100AAAB8C /* UIColor+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A85C1CD30E4100AAAB8C /* UIColor+Man.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		DD9778881CD3031500BA2076 /* SwiftManTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftManTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD97788D1CD3031500BA2076 /* SwiftManTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftManTests.swift; sourceTree = "<group>"; };
 		DD97788F1CD3031500BA2076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA2A85C1CD30E4100AAAB8C /* UIColor+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Man.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,8 @@
 		DD9778801CD3031500BA2076 /* SwiftMan */ = {
 			isa = PBXGroup;
 			children = (
+				DDA2A8431CD307C800AAAB8C /* Category */,
+				DDA2A85B1CD307C800AAAB8C /* Utils */,
 				DD9778811CD3031500BA2076 /* SwiftMan.h */,
 				DD9778831CD3031500BA2076 /* Info.plist */,
 			);
@@ -84,6 +88,205 @@
 				DD97788F1CD3031500BA2076 /* Info.plist */,
 			);
 			path = SwiftManTests;
+			sourceTree = "<group>";
+		};
+		DDA2A8431CD307C800AAAB8C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2A8441CD307C800AAAB8C /* Foundation */,
+				DDA2A84E1CD307C800AAAB8C /* UIKit */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DDA2A8441CD307C800AAAB8C /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2A8451CD307C800AAAB8C /* NSBundle */,
+				DDA2A8461CD307C800AAAB8C /* NSData */,
+				DDA2A8471CD307C800AAAB8C /* NSDate */,
+				DDA2A8481CD307C800AAAB8C /* NSNotificationCenter */,
+				DDA2A8491CD307C800AAAB8C /* NSNull */,
+				DDA2A84A1CD307C800AAAB8C /* NSObject */,
+				DDA2A84B1CD307C800AAAB8C /* NSString */,
+				DDA2A84C1CD307C800AAAB8C /* NSTimer */,
+				DDA2A84D1CD307C800AAAB8C /* NSURL */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		DDA2A8451CD307C800AAAB8C /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSBundle;
+			sourceTree = "<group>";
+		};
+		DDA2A8461CD307C800AAAB8C /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		DDA2A8471CD307C800AAAB8C /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		DDA2A8481CD307C800AAAB8C /* NSNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSNotificationCenter;
+			sourceTree = "<group>";
+		};
+		DDA2A8491CD307C800AAAB8C /* NSNull */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSNull;
+			sourceTree = "<group>";
+		};
+		DDA2A84A1CD307C800AAAB8C /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		DDA2A84B1CD307C800AAAB8C /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		DDA2A84C1CD307C800AAAB8C /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSTimer;
+			sourceTree = "<group>";
+		};
+		DDA2A84D1CD307C800AAAB8C /* NSURL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSURL;
+			sourceTree = "<group>";
+		};
+		DDA2A84E1CD307C800AAAB8C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2A84F1CD307C800AAAB8C /* UIApplication */,
+				DDA2A8501CD307C800AAAB8C /* UIColor */,
+				DDA2A8511CD307C800AAAB8C /* UIDevice */,
+				DDA2A8521CD307C800AAAB8C /* UIImage */,
+				DDA2A8531CD307C800AAAB8C /* UILable */,
+				DDA2A8541CD307C800AAAB8C /* UINavigationBar */,
+				DDA2A8551CD307C800AAAB8C /* UINavigationController */,
+				DDA2A8561CD307C800AAAB8C /* UIScreen */,
+				DDA2A8571CD307C800AAAB8C /* UIScrollView */,
+				DDA2A8581CD307C800AAAB8C /* UIView */,
+				DDA2A8591CD307C800AAAB8C /* UIViewController */,
+				DDA2A85A1CD307C800AAAB8C /* UIWindow */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		DDA2A84F1CD307C800AAAB8C /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		DDA2A8501CD307C800AAAB8C /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2A85C1CD30E4100AAAB8C /* UIColor+Man.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		DDA2A8511CD307C800AAAB8C /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		DDA2A8521CD307C800AAAB8C /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		DDA2A8531CD307C800AAAB8C /* UILable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILable;
+			sourceTree = "<group>";
+		};
+		DDA2A8541CD307C800AAAB8C /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		DDA2A8551CD307C800AAAB8C /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		DDA2A8561CD307C800AAAB8C /* UIScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIScreen;
+			sourceTree = "<group>";
+		};
+		DDA2A8571CD307C800AAAB8C /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		DDA2A8581CD307C800AAAB8C /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		DDA2A8591CD307C800AAAB8C /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		DDA2A85A1CD307C800AAAB8C /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		DDA2A85B1CD307C800AAAB8C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA2A85D1CD30E4100AAAB8C /* UIColor+Man.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +446,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -254,9 +459,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -290,6 +496,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -297,8 +504,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -310,26 +518,31 @@
 		DD9778931CD3031500BA2076 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = SwiftMan/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oukavip.it.SwiftMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DD9778941CD3031500BA2076 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = SwiftMan/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -378,6 +591,7 @@
 				DD9778941CD3031500BA2076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD9778951CD3031500BA2076 /* Build configuration list for PBXNativeTarget "SwiftManTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +600,7 @@
 				DD9778971CD3031500BA2076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
