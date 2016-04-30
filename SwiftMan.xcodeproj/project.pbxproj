@@ -12,6 +12,8 @@
 		DD97788E1CD3031500BA2076 /* SwiftManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97788D1CD3031500BA2076 /* SwiftManTests.swift */; };
 		DDA2A85D1CD30E4100AAAB8C /* UIColor+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A85C1CD30E4100AAAB8C /* UIColor+Man.swift */; };
 		DDA2A86A1CD32E1700AAAB8C /* UIScreen+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8691CD32E1700AAAB8C /* UIScreen+Man.swift */; };
+		DDA2A86C1CD333F800AAAB8C /* UIImage+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A86B1CD333F800AAAB8C /* UIImage+Man.swift */; };
+		DDA2A86E1CD336A500AAAB8C /* UIApplication+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A86D1CD336A500AAAB8C /* UIApplication+Man.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		DD97788F1CD3031500BA2076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDA2A85C1CD30E4100AAAB8C /* UIColor+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Man.swift"; sourceTree = "<group>"; };
 		DDA2A8691CD32E1700AAAB8C /* UIScreen+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Man.swift"; sourceTree = "<group>"; };
+		DDA2A86B1CD333F800AAAB8C /* UIImage+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Man.swift"; sourceTree = "<group>"; };
+		DDA2A86D1CD336A500AAAB8C /* UIApplication+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Man.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		DDA2A84F1CD307C800AAAB8C /* UIApplication */ = {
 			isa = PBXGroup;
 			children = (
+				DDA2A86D1CD336A500AAAB8C /* UIApplication+Man.swift */,
 			);
 			path = UIApplication;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 		DDA2A8521CD307C800AAAB8C /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				DDA2A86B1CD333F800AAAB8C /* UIImage+Man.swift */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -402,6 +408,8 @@
 			files = (
 				DDA2A86A1CD32E1700AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDA2A85D1CD30E4100AAAB8C /* UIColor+Man.swift in Sources */,
+				DDA2A86C1CD333F800AAAB8C /* UIImage+Man.swift in Sources */,
+				DDA2A86E1CD336A500AAAB8C /* UIApplication+Man.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
