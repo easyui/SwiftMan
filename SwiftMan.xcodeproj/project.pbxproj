@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
+		DD6651281CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */; };
 		DD9778821CD3031500BA2076 /* SwiftMan.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9778811CD3031500BA2076 /* SwiftMan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD9778891CD3031500BA2076 /* SwiftMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97787E1CD3031500BA2076 /* SwiftMan.framework */; };
 		DD97788E1CD3031500BA2076 /* SwiftManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97788D1CD3031500BA2076 /* SwiftManTests.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
+		DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftManTestsUIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD97787E1CD3031500BA2076 /* SwiftMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9778811CD3031500BA2076 /* SwiftMan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMan.h; sourceTree = "<group>"; };
 		DD9778831CD3031500BA2076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		DD97788C1CD3031500BA2076 /* SwiftManTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */,
 				DD97788D1CD3031500BA2076 /* SwiftManTests.swift */,
 				DD97788F1CD3031500BA2076 /* Info.plist */,
 			);
@@ -229,6 +234,7 @@
 		DDA2A8AF1CD6EDAF00AAAB8C /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
+				DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */,
 			);
 			path = UIDevice;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				DDA2A8BB1CD6EDAF00AAAB8C /* UIApplication+Man.swift in Sources */,
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */,
+				DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD97788E1CD3031500BA2076 /* SwiftManTests.swift in Sources */,
+				DD6651281CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
