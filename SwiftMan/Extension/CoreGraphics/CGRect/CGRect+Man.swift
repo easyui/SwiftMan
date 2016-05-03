@@ -14,7 +14,7 @@ import UIKit
 extension CGRect {
     
     // X value of CGRect's origin
-    public var x: CGFloat {
+    public var m_x: CGFloat {
         get {
             return self.origin.x
         } set(value) {
@@ -23,7 +23,7 @@ extension CGRect {
     }
     
     // Y value of CGRect's origin
-    public var y: CGFloat {
+    public var m_y: CGFloat {
         get {
             return self.origin.y
         } set(value) {
@@ -32,7 +32,7 @@ extension CGRect {
     }
     
     // Width of CGRect's size
-    public var w: CGFloat {
+    public var m_w: CGFloat {
         get {
             return self.size.width
         } set(value) {
@@ -41,7 +41,7 @@ extension CGRect {
     }
     
     // Height of CGRect's size
-    public var h: CGFloat {
+    public var m_h: CGFloat {
         get {
             return self.size.height
         } set(value) {
