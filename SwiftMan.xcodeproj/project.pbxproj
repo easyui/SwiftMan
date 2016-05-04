@@ -27,6 +27,8 @@
 		DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EEA1CD9CCC000E196EB /* UIWindow+Man.swift */; };
 		DDED9EEE1CD9D11800E196EB /* Bool+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EED1CD9D11800E196EB /* Bool+Man.swift */; };
 		DDED9EF01CD9D25800E196EB /* AppInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EEF1CD9D25800E196EB /* AppInfos.swift */; };
+		DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */; };
+		DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		DDED9EEA1CD9CCC000E196EB /* UIWindow+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Man.swift"; sourceTree = "<group>"; };
 		DDED9EED1CD9D11800E196EB /* Bool+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Man.swift"; sourceTree = "<group>"; };
 		DDED9EEF1CD9D25800E196EB /* AppInfos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfos.swift; sourceTree = "<group>"; };
+		DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Format.swift"; sourceTree = "<group>"; };
+		DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Comparable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 		DDA2A8A31CD6EDAF00AAAB8C /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
+				DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */,
+				DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -482,6 +488,8 @@
 				DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */,
 				DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */,
 				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
+				DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */,
+				DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */,
 				DDED9EE91CD9C61B00E196EB /* UIButton+Man.swift in Sources */,
 				DD6651341CD9123000C81C38 /* NSTimer+Block.swift in Sources */,
 				DDA2A8BC1CD6EDAF00AAAB8C /* UIColor+Man.swift in Sources */,
