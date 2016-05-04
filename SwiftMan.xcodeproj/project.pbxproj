@@ -29,6 +29,10 @@
 		DDED9EF01CD9D25800E196EB /* AppInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EEF1CD9D25800E196EB /* AppInfos.swift */; };
 		DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */; };
 		DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */; };
+		DDED9EF61CD9EBBD00E196EB /* String+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF51CD9EBBD00E196EB /* String+Man.swift */; };
+		DDED9EF81CD9F13D00E196EB /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF71CD9F13D00E196EB /* String+Format.swift */; };
+		DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF91CD9FC5D00E196EB /* String+JSON.swift */; };
+		DDED9EFC1CD9FC7100E196EB /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EFB1CD9FC7100E196EB /* String+URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		DDED9EEF1CD9D25800E196EB /* AppInfos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfos.swift; sourceTree = "<group>"; };
 		DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Format.swift"; sourceTree = "<group>"; };
 		DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Comparable.swift"; sourceTree = "<group>"; };
+		DDED9EF51CD9EBBD00E196EB /* String+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Man.swift"; sourceTree = "<group>"; };
+		DDED9EF71CD9F13D00E196EB /* String+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
+		DDED9EF91CD9FC5D00E196EB /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JSON.swift"; sourceTree = "<group>"; };
+		DDED9EFB1CD9FC7100E196EB /* String+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +236,10 @@
 		DDA2A8A71CD6EDAF00AAAB8C /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				DDED9EF51CD9EBBD00E196EB /* String+Man.swift */,
+				DDED9EF71CD9F13D00E196EB /* String+Format.swift */,
+				DDED9EF91CD9FC5D00E196EB /* String+JSON.swift */,
+				DDED9EFB1CD9FC7100E196EB /* String+URL.swift */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -487,10 +499,14 @@
 				DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */,
 				DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */,
 				DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */,
+				DDED9EFC1CD9FC7100E196EB /* String+URL.swift in Sources */,
 				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
+				DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */,
 				DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */,
 				DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */,
+				DDED9EF61CD9EBBD00E196EB /* String+Man.swift in Sources */,
 				DDED9EE91CD9C61B00E196EB /* UIButton+Man.swift in Sources */,
+				DDED9EF81CD9F13D00E196EB /* String+Format.swift in Sources */,
 				DD6651341CD9123000C81C38 /* NSTimer+Block.swift in Sources */,
 				DDA2A8BC1CD6EDAF00AAAB8C /* UIColor+Man.swift in Sources */,
 				DDED9EEE1CD9D11800E196EB /* Bool+Man.swift in Sources */,

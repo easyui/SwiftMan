@@ -7,8 +7,7 @@
 //
 
 import Foundation
-
-extension NSObject {
+ extension NSObject {
     public var m_className: String {
         return self.dynamicType.m_className
     }
