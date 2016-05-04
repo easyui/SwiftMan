@@ -11,7 +11,7 @@ import Foundation
 extension NSURL {
     
     
-    public var queryParameters: [String: String]? {
+    public var m_queryParameters: [String: String]? {
         guard let components = NSURLComponents(URL: self, resolvingAgainstBaseURL: true), queryItems = components.queryItems else {
             return nil
         }
