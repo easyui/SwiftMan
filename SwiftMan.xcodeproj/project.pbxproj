@@ -22,6 +22,7 @@
 		DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8B11CD6EDAF00AAAB8C /* UIImage+Man.swift */; };
 		DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8B61CD6EDAF00AAAB8C /* UIScreen+Man.swift */; };
 		DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE31CD9A39900E196EB /* NSTimer+Addition.swift */; };
+		DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE51CD9C3C300E196EB /* NSURL+Man.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DDA2A8B11CD6EDAF00AAAB8C /* UIImage+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Man.swift"; sourceTree = "<group>"; };
 		DDA2A8B61CD6EDAF00AAAB8C /* UIScreen+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Man.swift"; sourceTree = "<group>"; };
 		DDED9EE31CD9A39900E196EB /* NSTimer+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Addition.swift"; sourceTree = "<group>"; };
+		DDED9EE51CD9C3C300E196EB /* NSURL+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Man.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 		DDA2A8A91CD6EDAF00AAAB8C /* NSURL */ = {
 			isa = PBXGroup;
 			children = (
+				DDED9EE51CD9C3C300E196EB /* NSURL+Man.swift */,
 			);
 			path = NSURL;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD66512C1CD8EC7600C81C38 /* CGRect+Man.swift in Sources */,
+				DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */,
 				DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */,
 				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
 				DD6651341CD9123000C81C38 /* NSTimer+Block.swift in Sources */,
