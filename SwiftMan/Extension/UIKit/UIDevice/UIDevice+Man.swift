@@ -9,20 +9,31 @@
 import UIKit
 
 extension UIDevice {
-    /// Returns true if the device is iPhone
+    // Returns true if the device is iPhone
     public static var  m_isPhone: Bool {
         return UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone
     }
     
-    /// Returns true if the device is iPad
+    // Returns true if the device is iPad
     public static var  m_isPad: Bool {
         return UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad
     }
     
-    ///  Operating system name  e.g. iPhone OS
+    //  Operating system name  e.g. iPhone OS
     public static var m_systemName: String {
         return UIDevice.currentDevice().systemName
     }
+    
+    //    e.g. iPhone1,1
+    public static var m_deviceModel: String {
+        var size: Int = 0
+        sysctlbyname("hw.machine", nil, &size, nil, 0)
+        var machine = [CChar](count: Int(size), repeatedValue: 0)
+        sysctlbyname("hw.machine", &machine, &size, nil, 0)
+        return String.fromCString(machine)!
+    }
+    
+    
     
     //   Operating system version e.g. 9.3
     public static var m_systemVersion: String {
@@ -44,6 +55,21 @@ extension UIDevice {
         return NSBundle.mainBundle().preferredLocalizations[0]
     }
     
+    //
+    public static var m_compilationArchitecture: String {
+        #if __LP64__
+            return "64bits";
+        #else
+            return "32bits";
+        #endif
+    }
+    
+    
+    public static var m_batteryLevel: Float {
+        UIDevice.currentDevice().batteryMonitoringEnabled = true
+        return UIDevice.currentDevice().batteryLevel
+    }
+    
     
     public enum Version: Float {
         case Five = 5.0
@@ -56,13 +82,13 @@ extension UIDevice {
     public class func isVersion(version: Version) -> Bool {
         return UIDevice.m_systemFloatVersion >= version.rawValue && UIDevice.m_systemFloatVersion < (version.rawValue + 1.0)
     }
-
+    
     public class func isVersionOrLater(version: Version) -> Bool {
         return UIDevice.m_systemFloatVersion >= version.rawValue
     }
-
+    
     public class func isVersionOrEarlier(version: Version) -> Bool {
         return UIDevice.m_systemFloatVersion < (version.rawValue + 1.0)
     }
-
+    
 }
