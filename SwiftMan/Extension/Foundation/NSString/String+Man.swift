@@ -11,7 +11,7 @@ import Foundation
 extension String {
     //去掉前后空格
     public mutating func m_trim() {
-        self = self.trimmed()
+        self = self.m_trimmed()
     }
     
     //

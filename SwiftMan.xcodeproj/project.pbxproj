@@ -33,6 +33,8 @@
 		DDED9EF81CD9F13D00E196EB /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF71CD9F13D00E196EB /* String+Format.swift */; };
 		DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF91CD9FC5D00E196EB /* String+JSON.swift */; };
 		DDED9EFC1CD9FC7100E196EB /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EFB1CD9FC7100E196EB /* String+URL.swift */; };
+		DDED9EFE1CDA0F0000E196EB /* Array+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EFD1CDA0F0000E196EB /* Array+Man.swift */; };
+		DDED9F001CDA0F1900E196EB /* Dictionary+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EFF1CDA0F1900E196EB /* Dictionary+Man.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		DDED9EF71CD9F13D00E196EB /* String+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
 		DDED9EF91CD9FC5D00E196EB /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JSON.swift"; sourceTree = "<group>"; };
 		DDED9EFB1CD9FC7100E196EB /* String+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
+		DDED9EFD1CDA0F0000E196EB /* Array+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Man.swift"; sourceTree = "<group>"; };
+		DDED9EFF1CDA0F1900E196EB /* Dictionary+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Man.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +387,8 @@
 			isa = PBXGroup;
 			children = (
 				DDED9EED1CD9D11800E196EB /* Bool+Man.swift */,
+				DDED9EFD1CDA0F0000E196EB /* Array+Man.swift */,
+				DDED9EFF1CDA0F1900E196EB /* Dictionary+Man.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -499,7 +505,9 @@
 				DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */,
 				DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */,
 				DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */,
+				DDED9F001CDA0F1900E196EB /* Dictionary+Man.swift in Sources */,
 				DDED9EFC1CD9FC7100E196EB /* String+URL.swift in Sources */,
+				DDED9EFE1CDA0F0000E196EB /* Array+Man.swift in Sources */,
 				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
 				DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */,
 				DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */,
