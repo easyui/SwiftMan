@@ -23,6 +23,7 @@
 		DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8B61CD6EDAF00AAAB8C /* UIScreen+Man.swift */; };
 		DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE31CD9A39900E196EB /* NSTimer+Addition.swift */; };
 		DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE51CD9C3C300E196EB /* NSURL+Man.swift */; };
+		DDED9EE91CD9C61B00E196EB /* UIButton+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE81CD9C61B00E196EB /* UIButton+Man.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DDA2A8B61CD6EDAF00AAAB8C /* UIScreen+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Man.swift"; sourceTree = "<group>"; };
 		DDED9EE31CD9A39900E196EB /* NSTimer+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Addition.swift"; sourceTree = "<group>"; };
 		DDED9EE51CD9C3C300E196EB /* NSURL+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Man.swift"; sourceTree = "<group>"; };
+		DDED9EE81CD9C61B00E196EB /* UIButton+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Man.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA2A8AB1CD6EDAF00AAAB8C /* UIApplication */,
+				DDED9EE71CD9C60F00E196EB /* UIButton */,
 				DDA2A8AD1CD6EDAF00AAAB8C /* UIColor */,
 				DDA2A8AF1CD6EDAF00AAAB8C /* UIDevice */,
 				DDA2A8B01CD6EDAF00AAAB8C /* UIImage */,
@@ -339,6 +342,14 @@
 			children = (
 			);
 			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		DDED9EE71CD9C60F00E196EB /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				DDED9EE81CD9C61B00E196EB /* UIButton+Man.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +464,7 @@
 				DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */,
 				DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */,
 				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
+				DDED9EE91CD9C61B00E196EB /* UIButton+Man.swift in Sources */,
 				DD6651341CD9123000C81C38 /* NSTimer+Block.swift in Sources */,
 				DDA2A8BC1CD6EDAF00AAAB8C /* UIColor+Man.swift in Sources */,
 				DD6651321CD9103E00C81C38 /* NSObject+Man.swift in Sources */,
