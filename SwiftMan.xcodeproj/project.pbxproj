@@ -23,6 +23,7 @@
 
 /* Begin PBXBuildFile section */
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
+		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
 		DD6651281CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */; };
 		DD66512C1CD8EC7600C81C38 /* CGRect+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */; };
 		DD66512E1CD8F5C800C81C38 /* NSBundle+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512D1CD8F5C800C81C38 /* NSBundle+Man.swift */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
+		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
 		DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftManTestsUIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Man.swift"; sourceTree = "<group>"; };
 		DD66512D1CD8F5C800C81C38 /* NSBundle+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Man.swift"; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD605CB31D19E01900E3F2D8 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
 		DD6651291CD8E99800C81C38 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +300,7 @@
 		DDA2A8AA1CD6EDAF00AAAB8C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DD605CB31D19E01900E3F2D8 /* UITableViewCell */,
 				DDA2A8AB1CD6EDAF00AAAB8C /* UIApplication */,
 				DDED9EE71CD9C60F00E196EB /* UIButton */,
 				DDA2A8AD1CD6EDAF00AAAB8C /* UIColor */,
@@ -553,6 +564,7 @@
 				DDED9EFE1CDA0F0000E196EB /* Array+Man.swift in Sources */,
 				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
 				DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */,
+				DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */,
 				DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */,
 				DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */,
 				DDED9EF61CD9EBBD00E196EB /* String+Man.swift in Sources */,
