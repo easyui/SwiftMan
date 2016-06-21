@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		DD8BCCC01D19987D0080A0C1 /* buildFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DD8BCCC31D19987D0080A0C1 /* Build configuration list for PBXAggregateTarget "buildFramework" */;
+			buildPhases = (
+				DD8BCCC61D1998A40080A0C1 /* ShellScript */,
+			);
+			dependencies = (
+				DD8BCCC51D19989C0080A0C1 /* PBXTargetDependency */,
+			);
+			name = buildFramework;
+			productName = buildFramework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
 		DD6651281CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */; };
@@ -38,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DD8BCCC41D19989C0080A0C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9778751CD3031500BA2076 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD97787D1CD3031500BA2076;
+			remoteInfo = SwiftMan;
+		};
 		DD97788A1CD3031500BA2076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD9778751CD3031500BA2076 /* Project object */;
@@ -453,6 +475,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = cactus;
 				TargetAttributes = {
+					DD8BCCC01D19987D0080A0C1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3X4R4KE83C;
+					};
 					DD97787D1CD3031500BA2076 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -475,6 +501,7 @@
 			targets = (
 				DD97787D1CD3031500BA2076 /* SwiftMan */,
 				DD9778871CD3031500BA2076 /* SwiftManTests */,
+				DD8BCCC01D19987D0080A0C1 /* buildFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -495,6 +522,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD8BCCC61D1998A40080A0C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD9778791CD3031500BA2076 /* Sources */ = {
@@ -540,6 +583,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DD8BCCC51D19989C0080A0C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD97787D1CD3031500BA2076 /* SwiftMan */;
+			targetProxy = DD8BCCC41D19989C0080A0C1 /* PBXContainerItemProxy */;
+		};
 		DD97788B1CD3031500BA2076 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DD97787D1CD3031500BA2076 /* SwiftMan */;
@@ -548,6 +596,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DD8BCCC11D19987D0080A0C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD8BCCC21D19987D0080A0C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DD9778901CD3031500BA2076 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -703,6 +765,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD8BCCC31D19987D0080A0C1 /* Build configuration list for PBXAggregateTarget "buildFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8BCCC11D19987D0080A0C1 /* Debug */,
+				DD8BCCC21D19987D0080A0C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD9778781CD3031500BA2076 /* Build configuration list for PBXProject "SwiftMan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
