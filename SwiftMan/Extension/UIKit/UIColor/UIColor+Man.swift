@@ -30,7 +30,7 @@ extension UIColor {
         let red = (rgbHex >> 16) & 0xFF
         let green = (rgbHex >> 8) & 0xFF
         let blue = (rgbHex) & 0xFF
-        self.init(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: alpha)
+        self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: alpha)
     }
     
     //  Returns random UIColor with random alpha(default: false)
