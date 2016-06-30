@@ -23,6 +23,7 @@
 
 /* Begin PBXBuildFile section */
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
+		DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */; };
 		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
 		DD6651281CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */; };
 		DD66512C1CD8EC7600C81C38 /* CGRect+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
+		DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Man.swift"; sourceTree = "<group>"; };
 		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
 		DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftManTestsUIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Man.swift"; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD3F99B61D257AB30097F5D3 /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */,
+			);
+			path = UIAlertController;
+			sourceTree = "<group>";
+		};
 		DD605CB31D19E01900E3F2D8 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +310,7 @@
 		DDA2A8AA1CD6EDAF00AAAB8C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DD3F99B61D257AB30097F5D3 /* UIAlertController */,
 				DD605CB31D19E01900E3F2D8 /* UITableViewCell */,
 				DDA2A8AB1CD6EDAF00AAAB8C /* UIApplication */,
 				DDED9EE71CD9C60F00E196EB /* UIButton */,
@@ -574,6 +585,7 @@
 				DDA2A8BC1CD6EDAF00AAAB8C /* UIColor+Man.swift in Sources */,
 				DDED9EEE1CD9D11800E196EB /* Bool+Man.swift in Sources */,
 				DDED9EF01CD9D25800E196EB /* AppInfos.swift in Sources */,
+				DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */,
 				DD6651321CD9103E00C81C38 /* NSObject+Man.swift in Sources */,
 				DDA2A8BB1CD6EDAF00AAAB8C /* UIApplication+Man.swift in Sources */,
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
