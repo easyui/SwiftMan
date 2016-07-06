@@ -10,6 +10,7 @@ import XCTest
 
 class SwiftManTestsUIDevice_Man: XCTestCase {
     func testPrintSomeAttributes() {
+   
         print("start--------")
         print(UIDevice.m_systemName)
         print(UIDevice.m_systemVersion)
