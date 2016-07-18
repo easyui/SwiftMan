@@ -38,6 +38,9 @@
 		DDA2A8BC1CD6EDAF00AAAB8C /* UIColor+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8AE1CD6EDAF00AAAB8C /* UIColor+Man.swift */; };
 		DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8B11CD6EDAF00AAAB8C /* UIImage+Man.swift */; };
 		DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2A8B61CD6EDAF00AAAB8C /* UIScreen+Man.swift */; };
+		DDAEEA971D3C7C7000525126 /* UIView+Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEEA961D3C7C7000525126 /* UIView+Rect.swift */; };
+		DDAEEA991D3C9BC300525126 /* UIView+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEEA981D3C9BC300525126 /* UIView+Man.swift */; };
+		DDAEEA9B1D3C9C5400525126 /* UIView+Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEEA9A1D3C9C5400525126 /* UIView+Find.swift */; };
 		DDED9EE41CD9A39900E196EB /* NSTimer+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE31CD9A39900E196EB /* NSTimer+Addition.swift */; };
 		DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE51CD9C3C300E196EB /* NSURL+Man.swift */; };
 		DDED9EE91CD9C61B00E196EB /* UIButton+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EE81CD9C61B00E196EB /* UIButton+Man.swift */; };
@@ -91,6 +94,9 @@
 		DDA2A8AE1CD6EDAF00AAAB8C /* UIColor+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Man.swift"; sourceTree = "<group>"; };
 		DDA2A8B11CD6EDAF00AAAB8C /* UIImage+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Man.swift"; sourceTree = "<group>"; };
 		DDA2A8B61CD6EDAF00AAAB8C /* UIScreen+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Man.swift"; sourceTree = "<group>"; };
+		DDAEEA961D3C7C7000525126 /* UIView+Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Rect.swift"; sourceTree = "<group>"; };
+		DDAEEA981D3C9BC300525126 /* UIView+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Man.swift"; sourceTree = "<group>"; };
+		DDAEEA9A1D3C9C5400525126 /* UIView+Find.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Find.swift"; sourceTree = "<group>"; };
 		DDED9EE31CD9A39900E196EB /* NSTimer+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Addition.swift"; sourceTree = "<group>"; };
 		DDED9EE51CD9C3C300E196EB /* NSURL+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Man.swift"; sourceTree = "<group>"; };
 		DDED9EE81CD9C61B00E196EB /* UIButton+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Man.swift"; sourceTree = "<group>"; };
@@ -400,6 +406,9 @@
 		DDA2A8B81CD6EDAF00AAAB8C /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				DDAEEA981D3C9BC300525126 /* UIView+Man.swift */,
+				DDAEEA961D3C7C7000525126 /* UIView+Rect.swift */,
+				DDAEEA9A1D3C9C5400525126 /* UIView+Find.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -576,6 +585,7 @@
 				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
 				DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */,
 				DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */,
+				DDAEEA9B1D3C9C5400525126 /* UIView+Find.swift in Sources */,
 				DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */,
 				DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */,
 				DDED9EF61CD9EBBD00E196EB /* String+Man.swift in Sources */,
@@ -589,9 +599,11 @@
 				DD6651321CD9103E00C81C38 /* NSObject+Man.swift in Sources */,
 				DDA2A8BB1CD6EDAF00AAAB8C /* UIApplication+Man.swift in Sources */,
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
+				DDAEEA971D3C7C7000525126 /* UIView+Rect.swift in Sources */,
 				DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */,
 				DD66512E1CD8F5C800C81C38 /* NSBundle+Man.swift in Sources */,
 				DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */,
+				DDAEEA991D3C9BC300525126 /* UIView+Man.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
