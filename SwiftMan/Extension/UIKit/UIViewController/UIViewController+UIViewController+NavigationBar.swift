@@ -39,7 +39,6 @@ extension UIViewController{
         let barButton = UIButton(type: .Custom)
         barButton.frame = CGRectMake(0, 0, 45, 40)
         barButton.backgroundColor = UIColor.clearColor()
-        //                return self.scheduledTimerWithTimeInterval(timeInterval, target: self, selector: #selector(NSTimer.executeBlockWithTimer(_:)), userInfo: unsafeBitCast(block, AnyObject.self), repeats: repeats)
 
 //        barButton.addTarget(self, action: Selector(position.rawValue), forControlEvents: .TouchUpInside)
         barButton.addTarget(self, action: (position == .NavigationBarButtonAsLeft) ? #selector(UIViewController.leftBarButtonAction(_:)) : #selector(UIViewController.rightBarButtonAction(_:)), forControlEvents: .TouchUpInside)
