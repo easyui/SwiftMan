@@ -109,7 +109,7 @@ extension UIViewController{
         
     }
     
-    func leftBarButtonAction(sender: UIButton?)
+    @objc func leftBarButtonAction(sender: UIButton?)
     {
         let switchEffect = objc_getAssociatedObject(self, &AssociatedKeys.SwitchEffectKey) as? Bool
         if let _ = switchEffect {
@@ -126,7 +126,7 @@ extension UIViewController{
         block(barButton: sender)
     }
     
-    func rightBarButtonAction(sender: UIButton?)
+    @objc func rightBarButtonAction(sender: UIButton?)
     {
         let switchEffect = objc_getAssociatedObject(self, &AssociatedKeys.SwitchEffectKey) as? Bool
         if let _ = switchEffect {
