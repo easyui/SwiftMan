@@ -132,28 +132,16 @@ extension UIViewController{
     @objc private func rightBarButtonAction(sender: UIButton?)
     {
         
-        print("1")
         let switchEffect = objc_getAssociatedObject(self, &AssociatedKeys.SwitchEffectKey) as? Bool
         if let _ = switchEffect {
-            print("2")
-
             if let button = sender{
-                print("3")
-
                 button.selected = !button.selected
             }
         }
-        print("4")
-
-        
         let wrapper = objc_getAssociatedObject(self, &AssociatedKeys.RightActionBlockKey)
         if wrapper == nil{
-            print("5")
-
             return
         }
-        print("6")
-
         let block = unsafeBitCast(wrapper, ActionBlock.self)
         block(barButton: sender)
         
