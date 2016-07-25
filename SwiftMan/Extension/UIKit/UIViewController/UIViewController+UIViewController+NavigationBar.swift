@@ -39,7 +39,10 @@ extension UIViewController{
         let barButton = UIButton(type: .Custom)
         barButton.frame = CGRectMake(0, 0, 45, 40)
         barButton.backgroundColor = UIColor.clearColor()
-        barButton.addTarget(self, action: Selector(position.rawValue), forControlEvents: .TouchUpInside)
+        //                return self.scheduledTimerWithTimeInterval(timeInterval, target: self, selector: #selector(NSTimer.executeBlockWithTimer(_:)), userInfo: unsafeBitCast(block, AnyObject.self), repeats: repeats)
+
+//        barButton.addTarget(self, action: Selector(position.rawValue), forControlEvents: .TouchUpInside)
+        barButton.addTarget(self, action: (position == .NavigationBarButtonAsLeft) ? #selector(UIViewController.leftBarButtonAction(_:)) : #selector(UIViewController.rightBarButtonAction(_:)), forControlEvents: .TouchUpInside)
         barButton.imageView?.contentMode = .ScaleAspectFit
         if let image = normalImage{
             barButton.setImage(image, forState: .Normal)
@@ -109,7 +112,7 @@ extension UIViewController{
         
     }
     
-    @objc func leftBarButtonAction(sender: UIButton?)
+    @objc private func leftBarButtonAction(sender: UIButton?)
     {
         let switchEffect = objc_getAssociatedObject(self, &AssociatedKeys.SwitchEffectKey) as? Bool
         if let _ = switchEffect {
@@ -126,7 +129,7 @@ extension UIViewController{
         block(barButton: sender)
     }
     
-    @objc func rightBarButtonAction(sender: UIButton?)
+    @objc private func rightBarButtonAction(sender: UIButton?)
     {
         let switchEffect = objc_getAssociatedObject(self, &AssociatedKeys.SwitchEffectKey) as? Bool
         if let _ = switchEffect {
