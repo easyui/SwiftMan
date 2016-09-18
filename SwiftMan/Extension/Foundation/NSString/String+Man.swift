@@ -16,8 +16,8 @@ extension String {
     
     //
     public func m_trimmed() -> String {
-        let set : NSCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        return self.stringByTrimmingCharactersInSet(set)
+        let set : CharacterSet = CharacterSet.whitespacesAndNewlines
+        return self.trimmingCharacters(in: set)
     }
 
 }

@@ -10,7 +10,7 @@ import Foundation
 
 extension Array {
     public func m_prettyJSONString() -> String?{
-        return JSONStringWithOption([.PrettyPrinted])
+        return JSONStringWithOption([.prettyPrinted])
     }
     
     public func m_JSONStringRepresentation()  -> String?{
@@ -18,10 +18,10 @@ extension Array {
     }
     
     
-    private func JSONStringWithOption(option: NSJSONWritingOptions) -> String?{
+    fileprivate func JSONStringWithOption(_ option: JSONSerialization.WritingOptions) -> String?{
         do{
-            let data = try NSJSONSerialization.dataWithJSONObject(self as! AnyObject, options: option)
-            return  String(data: data, encoding: NSUTF8StringEncoding)
+            let data = try JSONSerialization.data(withJSONObject: self as AnyObject, options: option)
+            return  String(data: data, encoding: String.Encoding.utf8)
         } catch {
             return nil
         }

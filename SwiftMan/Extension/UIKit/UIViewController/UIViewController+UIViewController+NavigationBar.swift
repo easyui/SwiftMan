@@ -10,7 +10,7 @@ import UIKit
 
 
 extension UIViewController{
-    private struct AssociatedKeys {
+    fileprivate struct AssociatedKeys {
         static var SwitchEffectKey = "SwitchEffectKey"
         static var LeftActionBlockKey = "LeftActionBlockKey"
         static var RightActionBlockKey = "RightActionBlockKey"
@@ -20,9 +20,9 @@ extension UIViewController{
         case NavigationBarButtonAsLeft = "leftBarButtonAction:"
         case  NavigationBarButtonAsRight = "rightBarButtonAction:"
     }
-    public typealias ActionBlock = @convention(block) (barButton: UIButton?) -> Void
+    public typealias ActionBlock = @convention(block) (_ barButton: UIButton?) -> Void
     
-    public  func m_setNavigationBarButtonPosition(position: NavigationBarButtonAsPosition,
+    public  func m_setNavigationBarButtonPosition(_ position: NavigationBarButtonAsPosition,
                                                    normalImage: UIImage?,
                                                    highlightedImage: UIImage?,
                                                    normalBgImage: UIImage?,
@@ -36,49 +36,49 @@ extension UIViewController{
                                                    offset:CGFloat, //set -24 to system default, toolkit provide 24 as default offset
         setButtonBlock: ActionBlock? ){
         
-        let barButton = UIButton(type: .Custom)
-        barButton.frame = CGRectMake(0, 0, 45, 40)
-        barButton.backgroundColor = UIColor.clearColor()
+        let barButton = UIButton(type: .custom)
+        barButton.frame = CGRect(x: 0, y: 0, width: 45, height: 40)
+        barButton.backgroundColor = UIColor.clear
 
 //        barButton.addTarget(self, action: Selector(position.rawValue), forControlEvents: .TouchUpInside)
-        barButton.addTarget(self, action: (position == .NavigationBarButtonAsLeft) ? #selector(UIViewController.leftBarButtonAction(_:)) : #selector(UIViewController.rightBarButtonAction(_:)), forControlEvents: .TouchUpInside)
-        barButton.imageView?.contentMode = .ScaleAspectFit
+        barButton.addTarget(self, action: (position == .NavigationBarButtonAsLeft) ? #selector(UIViewController.leftBarButtonAction(_:)) : #selector(UIViewController.rightBarButtonAction(_:)), for: .touchUpInside)
+        barButton.imageView?.contentMode = .scaleAspectFit
         if let image = normalImage{
-            barButton.setImage(image, forState: .Normal)
+            barButton.setImage(image, for: UIControlState())
         }
         if let image = highlightedImage{
-            barButton.setImage(image, forState: .Highlighted)
+            barButton.setImage(image, for: .highlighted)
         }
         
         if let image = normalBgImage{
-            barButton.setBackgroundImage(image, forState: .Normal)
+            barButton.setBackgroundImage(image, for: UIControlState())
         }
         if let image = highlightedBgImage{
-            barButton.setBackgroundImage(image, forState: .Highlighted)
+            barButton.setBackgroundImage(image, for: .highlighted)
         }
         
         if let titleTemp = title{
-            barButton.setTitle(titleTemp, forState: .Normal)
+            barButton.setTitle(titleTemp, for: UIControlState())
         }
         if let font = titleFont{
             barButton.titleLabel?.font = font
         }
         if let color = normalColor{
-            barButton.setTitleColor(color, forState: .Normal)
+            barButton.setTitleColor(color, for: UIControlState())
         }
         if let color = highlightedColor{
-            barButton.setTitleColor(color, forState: .Highlighted)
+            barButton.setTitleColor(color, for: .highlighted)
         }
         
         if (switchEffect) {
             if let image = highlightedImage{
-                barButton.setImage(image, forState: .Selected)
+                barButton.setImage(image, for: .selected)
             }
             if let image = highlightedBgImage{
-                barButton.setBackgroundImage(image, forState: .Selected)
+                barButton.setBackgroundImage(image, for: .selected)
             }
             if let color = highlightedColor{
-                barButton.setTitleColor(color, forState: .Selected)
+                barButton.setTitleColor(color, for: .selected)
             }
         }
         
@@ -91,7 +91,7 @@ extension UIViewController{
         barButton.imageEdgeInsets = UIEdgeInsetsMake(0, position == .NavigationBarButtonAsLeft ? -(24+offset):0, 0, position == .NavigationBarButtonAsLeft ? 0:-(24+offset));
         barButton.titleEdgeInsets = UIEdgeInsetsMake(0, position == .NavigationBarButtonAsLeft ? -(24+offset):0, 0, position == .NavigationBarButtonAsLeft ? 0:-(24+offset));
         if let blockTemp = setButtonBlock {
-            blockTemp(barButton: barButton);
+            blockTemp(barButton);
         }
         if (switchEffect) {
             objc_setAssociatedObject(self, &AssociatedKeys.SwitchEffectKey, true, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
@@ -99,7 +99,7 @@ extension UIViewController{
         
         //http://www.hmttommy.com/2015/12/11/AddCategoryProperty/
         if let block = actionBlock{
-            let wrapper = unsafeBitCast(block, AnyObject.self)
+            let wrapper = unsafeBitCast(block, to: AnyObject.self)
             if position == .NavigationBarButtonAsLeft{
                 objc_setAssociatedObject(self,&AssociatedKeys.LeftActionBlockKey, wrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }else{
@@ -111,13 +111,13 @@ extension UIViewController{
         
     }
     
-    @objc private func leftBarButtonAction(sender: UIButton?)
+    @objc fileprivate func leftBarButtonAction(_ sender: UIButton?)
     {
         
         let switchEffect = objc_getAssociatedObject(self, &AssociatedKeys.SwitchEffectKey) as? Bool
         if let _ = switchEffect {
             if let button = sender{
-                button.selected = !button.selected
+                button.isSelected = !button.isSelected
             }
         }
         
@@ -125,25 +125,25 @@ extension UIViewController{
         if wrapper == nil{
             return
         }
-        let block = unsafeBitCast(wrapper, ActionBlock.self)
-        block(barButton: sender)
+        let block = unsafeBitCast(wrapper, to: ActionBlock.self)
+        block(sender)
     }
     
-    @objc private func rightBarButtonAction(sender: UIButton?)
+    @objc fileprivate func rightBarButtonAction(_ sender: UIButton?)
     {
         
         let switchEffect = objc_getAssociatedObject(self, &AssociatedKeys.SwitchEffectKey) as? Bool
         if let _ = switchEffect {
             if let button = sender{
-                button.selected = !button.selected
+                button.isSelected = !button.isSelected
             }
         }
         let wrapper = objc_getAssociatedObject(self, &AssociatedKeys.RightActionBlockKey)
         if wrapper == nil{
             return
         }
-        let block = unsafeBitCast(wrapper, ActionBlock.self)
-        block(barButton: sender)
+        let block = unsafeBitCast(wrapper, to: ActionBlock.self)
+        block(sender)
         
         
     }

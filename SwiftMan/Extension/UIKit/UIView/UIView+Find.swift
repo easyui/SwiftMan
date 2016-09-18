@@ -14,7 +14,7 @@ extension UIView {
     public var m_viewController: UIViewController? {
         get {
             var responder = self as UIResponder
-            while let nextResponder = responder.nextResponder() {
+            while let nextResponder = responder.next {
                 if (responder is UIViewController) {
                     return (responder as! UIViewController)
                 }
@@ -25,20 +25,20 @@ extension UIView {
     }
     
     
-    public func m_findSubViewWithClass(aClass: AnyClass) -> UIView? {
+    public func m_findSubViewWithClass(_ aClass: AnyClass) -> UIView? {
         for subView in self.subviews {
-            if (subView.dynamicType === aClass) {
+            if (type(of: subView) === aClass) {
                 return subView
             }
         }
         return nil
     }
     
-    public func  m_findSuperViewWithClass(aClass: AnyClass) -> UIView? {
+    public func  m_findSuperViewWithClass(_ aClass: AnyClass) -> UIView? {
         guard let parentView = self.superview else {
             return nil
         }
-        if (parentView.dynamicType === aClass) {
+        if (type(of: parentView) === aClass) {
             return parentView
         }
         
@@ -46,7 +46,7 @@ extension UIView {
     }
     
     public func  m_findAndResignFirstResponder() -> Bool {
-        if self.isFirstResponder() {
+        if self.isFirstResponder {
             self.resignFirstResponder()
             return true
         }
@@ -59,7 +59,7 @@ extension UIView {
     }
     
     public func  m_findFirstResponder() -> UIView? {
-        if (self is UITextField || self is UITextView) && self.isFirstResponder(){
+        if (self is UITextField || self is UITextView) && self.isFirstResponder{
             return self
         }
         for v: UIView in self.subviews {

@@ -123,17 +123,17 @@ extension UIView {
     // MARK: - view methods
     public var m_viewGetWidth: CGFloat{
         if ((NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1)) {
-            return  CGRectGetWidth(self.frame)
+            return  self.frame.width
         }else{
-            return UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation) ? CGRectGetHeight(self.frame) : CGRectGetWidth(self.frame)
+            return UIDeviceOrientationIsLandscape(UIDevice.current.orientation) ? self.frame.height : self.frame.width
         }
     }
     
     public var m_viewGetHeight: CGFloat{
         if ((NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1)) {
-            return  CGRectGetHeight(self.frame);
+            return  self.frame.height;
         }else{
-            return UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation) ? CGRectGetWidth(self.frame) : CGRectGetHeight(self.frame);
+            return UIDeviceOrientationIsLandscape(UIDevice.current.orientation) ? self.frame.width : self.frame.height;
         }
     }
     
@@ -196,17 +196,17 @@ extension UIView {
     
     
     
-    public func m_setMargins(margins: UIEdgeInsets)
+    public func m_setMargins(_ margins: UIEdgeInsets)
     {
         guard let parentView = superview else {
             assertionFailure("SwiftMan Error: The view \(self) doesn't have a superview")
             return
         }
         let superSize = parentView.frame.size;
-        self.frame = CGRectMake(margins.left,
-                                margins.top,
-                                superSize.width - (margins.left + margins.right),
-                                superSize.height - (margins.top + margins.bottom));
+        self.frame = CGRect(x: margins.left,
+                                y: margins.top,
+                                width: superSize.width - (margins.left + margins.right),
+                                height: superSize.height - (margins.top + margins.bottom));
     }
     
     

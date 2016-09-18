@@ -11,22 +11,22 @@ import UIKit
 extension UIViewController {
     
     // MARK: - add / remove
-    public func m_displayController(controller: UIViewController, frame: CGRect) {
+    public func m_displayController(_ controller: UIViewController, frame: CGRect) {
         self.addChildViewController(controller)
         controller.view.frame = frame
         self.view!.addSubview(controller.view)
-        controller.didMoveToParentViewController(self)
+        controller.didMove(toParentViewController: self)
     }
     
-    public func m_hideController(controller: UIViewController) {
-        controller.willMoveToParentViewController(nil)
+    public func m_hideController(_ controller: UIViewController) {
+        controller.willMove(toParentViewController: nil)
         controller.view.removeFromSuperview()
         controller.removeFromParentViewController()
     }
     
     // MARK: - status bar
     public var  m_statusBarHeight: CGFloat {
-        return self.view.window!.convertRect(UIApplication.sharedApplication().statusBarFrame, toView: self.view).size.height
+        return self.view.window!.convert(UIApplication.shared.statusBarFrame, to: self.view).size.height
     }
     
     // MARK: - navigation bar

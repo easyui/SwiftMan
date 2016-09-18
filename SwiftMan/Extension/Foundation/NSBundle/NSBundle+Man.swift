@@ -10,10 +10,10 @@ import Foundation
 
 
 
-public extension NSBundle {
+public extension Bundle {
         
     public convenience init?(bundleName: String){
-        let bundlePath = NSBundle.mainBundle().pathForResource(bundleName, ofType: "bundle")
+        let bundlePath = Bundle.main.path(forResource: bundleName, ofType: "bundle")
         guard bundlePath != nil else{
             return nil
         }

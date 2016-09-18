@@ -12,15 +12,15 @@ import UIKit
 extension UIView {
     
     public func m_snapshotImage() -> UIImage{
-        UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, 0.0)
-        if (self.respondsToSelector(#selector(UIView.drawViewHierarchyInRect(_:afterScreenUpdates:)))){
-            self.drawViewHierarchyInRect(bounds, afterScreenUpdates: false)
+        UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
+        if (self.responds(to: #selector(UIView.drawHierarchy(in:afterScreenUpdates:)))){
+            self.drawHierarchy(in: bounds, afterScreenUpdates: false)
         }else{
-            self.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+            self.layer.render(in: UIGraphicsGetCurrentContext()!)
         }
         let snapshotImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return snapshotImage
+        return snapshotImage!
     }
     
     

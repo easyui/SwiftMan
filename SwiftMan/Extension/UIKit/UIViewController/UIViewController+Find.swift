@@ -33,11 +33,11 @@ extension UIViewController {
     public class func m_currentViewControllerFromcurrentView() -> UIViewController? {
         var result: UIViewController? = nil
         // 1. get current window
-        guard var window = UIApplication.sharedApplication().keyWindow else {
+        guard var window = UIApplication.shared.keyWindow else {
             return nil
         }
         if window.windowLevel != UIWindowLevelNormal {
-            let windows = UIApplication.sharedApplication().windows
+            let windows = UIApplication.shared.windows
             for tmpWin in windows {
                 if tmpWin.windowLevel == UIWindowLevelNormal {
                     window = tmpWin
@@ -46,7 +46,7 @@ extension UIViewController {
         }
         // 2. get current View Controller
         let frontView = window.subviews[0]
-        let nextResponder = frontView.nextResponder()
+        let nextResponder = frontView.next
         if (nextResponder is UIViewController) {
             result = nextResponder as? UIViewController
         }
@@ -57,7 +57,7 @@ extension UIViewController {
     }
     
     public func m_isVisible() -> Bool {
-        return self.isViewLoaded() && (self.view.window != nil)
+        return self.isViewLoaded && (self.view.window != nil)
     }
     
 }

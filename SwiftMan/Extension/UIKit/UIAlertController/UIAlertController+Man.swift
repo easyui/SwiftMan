@@ -12,6 +12,6 @@ import UIKit
 
 extension UIAlertController{
      public func m_show() {
-        UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(self, animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController?.present(self, animated: true, completion: nil)
     }
 }

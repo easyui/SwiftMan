@@ -11,6 +11,6 @@ import UIKit
 
 extension UITableViewCell{
     public static func nib() -> UINib {
-        return  UINib(nibName: String(self), bundle: nil)
+        return  UINib(nibName: String(describing: self), bundle: nil)
     }
 }

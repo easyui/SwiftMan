@@ -11,33 +11,33 @@ import UIKit
 extension UIDevice {
     // Returns true if the device is iPhone
     public static var  m_isPhone: Bool {
-        return UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
     }
     
     // Returns true if the device is iPad
     public static var  m_isPad: Bool {
-        return UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }
     
     //  Operating system name  e.g. iPhone OS
     public static var m_systemName: String {
-        return UIDevice.currentDevice().systemName
+        return UIDevice.current.systemName
     }
     
     //    e.g. iPhone1,1
     public static var m_deviceModel: String {
         var size: Int = 0
         sysctlbyname("hw.machine", nil, &size, nil, 0)
-        var machine = [CChar](count: Int(size), repeatedValue: 0)
+        var machine = [CChar](repeating: 0, count: Int(size))
         sysctlbyname("hw.machine", &machine, &size, nil, 0)
-        return String.fromCString(machine)!
+        return String(cString: machine)
     }
     
     
     
     //   Operating system version e.g. 9.3
     public static var m_systemVersion: String {
-        return UIDevice.currentDevice().systemVersion
+        return UIDevice.current.systemVersion
     }
     
     //   Operating system version e.g. 9.3
@@ -47,12 +47,12 @@ extension UIDevice {
     
     //    e.g. iPhone Simulator
     public static var m_deviceName: String {
-        return UIDevice.currentDevice().name
+        return UIDevice.current.name
     }
     
     //    e.g. en
     public static var m_deviceLanguage: String {
-        return NSBundle.mainBundle().preferredLocalizations[0]
+        return Bundle.main.preferredLocalizations[0]
     }
     
     //
@@ -66,28 +66,28 @@ extension UIDevice {
     
     
     public static var m_batteryLevel: Float {
-        UIDevice.currentDevice().batteryMonitoringEnabled = true
-        return UIDevice.currentDevice().batteryLevel
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        return UIDevice.current.batteryLevel
     }
     
     
     public enum Version: Float {
-        case Five = 5.0
-        case Six = 6.0
-        case Seven = 7.0
-        case Eight = 8.0
-        case Nine = 9.0
+        case five = 5.0
+        case six = 6.0
+        case seven = 7.0
+        case eight = 8.0
+        case nine = 9.0
     }
     
-    public class func isVersion(version: Version) -> Bool {
+    public class func isVersion(_ version: Version) -> Bool {
         return UIDevice.m_systemFloatVersion >= version.rawValue && UIDevice.m_systemFloatVersion < (version.rawValue + 1.0)
     }
     
-    public class func isVersionOrLater(version: Version) -> Bool {
+    public class func isVersionOrLater(_ version: Version) -> Bool {
         return UIDevice.m_systemFloatVersion >= version.rawValue
     }
     
-    public class func isVersionOrEarlier(version: Version) -> Bool {
+    public class func isVersionOrEarlier(_ version: Version) -> Bool {
         return UIDevice.m_systemFloatVersion < (version.rawValue + 1.0)
     }
     

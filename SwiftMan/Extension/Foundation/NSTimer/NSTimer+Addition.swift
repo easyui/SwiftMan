@@ -8,27 +8,27 @@
 
 import Foundation
 
-extension NSTimer {
+extension Timer {
     
     public func m_pauseTimer(){
-        guard self.valid  else{
+        guard self.isValid  else{
             return
         }
-        self.fireDate = NSDate.distantFuture()
+        self.fireDate = Date.distantFuture
     }
     
     public func m_resumeTimer(){
-        guard self.valid  else{
+        guard self.isValid  else{
             return
         }
-        self.fireDate = NSDate()
+        self.fireDate = Date()
     }
     
     //延迟开始NSTimer
-    public func m_resumeTimerAfterTimeInterval(seconds: NSTimeInterval){
-        guard self.valid  else{
+    public func m_resumeTimerAfterTimeInterval(_ seconds: TimeInterval){
+        guard self.isValid  else{
             return
         }
-        self.fireDate = NSDate(timeIntervalSinceNow: seconds)
+        self.fireDate = Date(timeIntervalSinceNow: seconds)
     }
 }

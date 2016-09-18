@@ -11,10 +11,10 @@ import UIKit
 extension UIApplication{
 
     public var m_applicationFileSize: String {
-        func sizeOfFolderPath(folderPath: String) -> Int64 {
+        func sizeOfFolderPath(_ folderPath: String) -> Int64 {
             let contents: [String]?
             do {
-                contents = try NSFileManager.defaultManager().contentsOfDirectoryAtPath(folderPath)
+                contents = try FileManager.default.contentsOfDirectory(atPath: folderPath)
             } catch _ {
                 contents = nil
             }
@@ -22,9 +22,9 @@ extension UIApplication{
             
             if let tempContents = contents{
                 for file in tempContents {
-                    let dict = try?  NSFileManager.defaultManager().attributesOfItemAtPath((folderPath as NSString).stringByAppendingPathComponent(file))
+                    let dict = try?  FileManager.default.attributesOfItem(atPath: (folderPath as NSString).appendingPathComponent(file))
                     if dict != nil {
-                        folderSize += (dict![NSFileSize] as? Int64) ?? 0
+                        folderSize += (dict![FileAttributeKey.size] as? Int64) ?? 0
                     }
                 }
             }
@@ -35,25 +35,25 @@ extension UIApplication{
         let libSzie = sizeOfFolderPath(self.m_libraryPath)
         let cacheSize = sizeOfFolderPath(self.m_cachePath)
         let total = docSize + libSzie + cacheSize + cacheSize
-        let folderSizeStr = NSByteCountFormatter.stringFromByteCount(total, countStyle: .File)
+        let folderSizeStr = ByteCountFormatter.string(fromByteCount: total, countStyle: .file)
         
         return folderSizeStr
     }
     
     public var m_documentPath: String {
-        let dstPath =  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+        let dstPath =  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         return dstPath
     }
     
     
     public var m_libraryPath: String {
-        let dstPath =  NSSearchPathForDirectoriesInDomains(.LibraryDirectory, .UserDomainMask, true).first!
+        let dstPath =  NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first!
         return dstPath
     }
     
     
     public var m_cachePath: String {
-        let dstPath =  NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true).first!
+        let dstPath =  NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
         return dstPath
     }
     

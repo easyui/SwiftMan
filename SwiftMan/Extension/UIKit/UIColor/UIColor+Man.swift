@@ -16,8 +16,8 @@ extension UIColor {
     
     // init method with hex string and alpha(default: 1) ex: "0x111111","#111111"
     public convenience init?(hexString: String, alpha: CGFloat = 1.0) {
-        var formatted = hexString.stringByReplacingOccurrencesOfString("0x", withString: "")
-        formatted = formatted.stringByReplacingOccurrencesOfString("#", withString: "")
+        var formatted = hexString.replacingOccurrences(of: "0x", with: "")
+        formatted = formatted.replacingOccurrences(of: "#", with: "")
         if let hex = Int(formatted, radix: 16) {
             self.init(rgbHex: hex, alpha: alpha)
         } else {
@@ -34,7 +34,7 @@ extension UIColor {
     }
     
     //  Returns random UIColor with random alpha(default: false)
-    public static func m_randomColor(isRandomAlpha: Bool = false) -> UIColor {
+    public static func m_randomColor(_ isRandomAlpha: Bool = false) -> UIColor {
         func random() -> CGFloat {
             let upper = 255;
             return  CGFloat(arc4random_uniform(UInt32(upper))) / CGFloat(upper)

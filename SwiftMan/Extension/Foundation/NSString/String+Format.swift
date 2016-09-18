@@ -42,22 +42,22 @@ extension String {
      return [dateFormat stringFromDate:date];
      }
      */
-    public func m_toDasteStringWithDateFormat(formatString: String,timezoneAbbr: String,localeIdentifier:String,toDateFormat:String,toTimezoneAbbr:String,toLocaleIdentifier:String) -> String?{
-        return m_toDasteStringWithDateFormat(formatString, timezone:  NSTimeZone(abbreviation: timezoneAbbr)!, localeIdentifier: localeIdentifier, toDateFormat: toDateFormat, toTimezone:  NSTimeZone(abbreviation: toTimezoneAbbr)!, toLocaleIdentifier: toLocaleIdentifier)
+    public func m_toDasteStringWithDateFormat(_ formatString: String,timezoneAbbr: String,localeIdentifier:String,toDateFormat:String,toTimezoneAbbr:String,toLocaleIdentifier:String) -> String?{
+        return m_toDasteStringWithDateFormat(formatString, timezone:  TimeZone(abbreviation: timezoneAbbr)!, localeIdentifier: localeIdentifier, toDateFormat: toDateFormat, toTimezone:  TimeZone(abbreviation: toTimezoneAbbr)!, toLocaleIdentifier: toLocaleIdentifier)
     }
     
-    public func m_toDasteStringWithDateFormat(formatString: String,timezone: NSTimeZone,localeIdentifier:String,toDateFormat:String,toTimezone:NSTimeZone,toLocaleIdentifier:String) -> String?{
-        let dataFormat = NSDateFormatter()
-        dataFormat.locale = NSLocale(localeIdentifier: localeIdentifier)
+    public func m_toDasteStringWithDateFormat(_ formatString: String,timezone: TimeZone,localeIdentifier:String,toDateFormat:String,toTimezone:TimeZone,toLocaleIdentifier:String) -> String?{
+        let dataFormat = DateFormatter()
+        dataFormat.locale = Locale(identifier: localeIdentifier)
         dataFormat.timeZone = timezone
         dataFormat.dateFormat = formatString
         
-        let date = dataFormat.dateFromString(self)
-        dataFormat.locale = NSLocale(localeIdentifier: toLocaleIdentifier)
+        let date = dataFormat.date(from: self)
+        dataFormat.locale = Locale(identifier: toLocaleIdentifier)
         dataFormat.timeZone = toTimezone
         dataFormat.dateFormat = toDateFormat
         if date != nil{
-            return dataFormat.stringFromDate(date!)
+            return dataFormat.string(from: date!)
         }
         return nil
     }

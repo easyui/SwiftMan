@@ -9,21 +9,21 @@
 extension NSDate: Comparable {}
 //  Returns if dates are equal to each other
 public func == (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.isEqualToDate(rhs)
+    return (lhs == rhs)
 }
 //  Returns if one date is smaller than the other
 public func < (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedAscending
+    return lhs.compare(rhs as Date) == .orderedAscending
 }
 
 public func > (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedDescending
+    return lhs.compare(rhs as Date) == .orderedDescending
 }
 
 public func <= (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedAscending || lhs.compare(rhs) == .OrderedSame
+    return lhs.compare(rhs as Date) == .orderedAscending || lhs.compare(rhs as Date) == .orderedSame
 }
 
 public func >= (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedDescending || lhs.compare(rhs) == .OrderedSame
+    return lhs.compare(rhs as Date) == .orderedDescending || lhs.compare(rhs as Date) == .orderedSame
 }

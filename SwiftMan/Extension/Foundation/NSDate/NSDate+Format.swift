@@ -8,17 +8,17 @@
 
 import Foundation
 
-public extension NSDate {
-    public func m_toDateStringWithDateFormat(formatString: String,timezoneAbbr: String,localeIdentifier:String) -> String{
-        return m_toDasteStringWithDateFormat(formatString, timezone: NSTimeZone(abbreviation: timezoneAbbr)!, localeIdentifier: localeIdentifier)
+public extension Date {
+    public func m_toDateStringWithDateFormat(_ formatString: String,timezoneAbbr: String,localeIdentifier:String) -> String{
+        return m_toDasteStringWithDateFormat(formatString, timezone: TimeZone(abbreviation: timezoneAbbr)!, localeIdentifier: localeIdentifier)
     }
     
-    public func m_toDasteStringWithDateFormat(formatString: String,timezone: NSTimeZone,localeIdentifier:String) -> String{
-        let dataFormat = NSDateFormatter()
-        dataFormat.locale = NSLocale(localeIdentifier: localeIdentifier)
+    public func m_toDasteStringWithDateFormat(_ formatString: String,timezone: TimeZone,localeIdentifier:String) -> String{
+        let dataFormat = DateFormatter()
+        dataFormat.locale = Locale(identifier: localeIdentifier)
         dataFormat.timeZone = timezone
         dataFormat.dateFormat = formatString
-        return dataFormat.stringFromDate(self)
+        return dataFormat.string(from: self)
     }
     
 }

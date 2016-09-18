@@ -9,15 +9,15 @@
 import UIKit
 
 extension UIImage{
-    public static func m_imageWithColor(color: UIColor) -> UIImage
+    public static func m_imageWithColor(_ color: UIColor) -> UIImage
     {
-        let imageSize = CGSizeMake(1, 1);
+        let imageSize = CGSize(width: 1, height: 1);
         UIGraphicsBeginImageContextWithOptions(imageSize, true, 0);
         color.set();
-        let path = UIBezierPath(rect: CGRectMake(0, 0, imageSize.width, imageSize.height))
+        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
         path.fill()
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
 }

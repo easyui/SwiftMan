@@ -9,10 +9,10 @@
 import Foundation
  extension NSObject {
     public var m_className: String {
-        return self.dynamicType.m_className
+        return type(of: self).m_className
     }
     
     public static var m_className: String {
-        return String(self)
+        return String(describing: self)
     }
 }
