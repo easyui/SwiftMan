@@ -17,8 +17,8 @@ public extension Date {
     ///   - timezoneAbbr: The abbreviation for the time zone.
     ///   - localeIdentifier: the specified identifier.
     /// - Returns: 格式化的字符串
-    public func m_toDateStringWithDateFormat(_ formatString: String,timezoneAbbr: String,localeIdentifier:String) -> String{
-        return m_toDasteStringWithDateFormat(formatString, timezone: TimeZone(abbreviation: timezoneAbbr)!, localeIdentifier: localeIdentifier)
+    public func m_toDateString(formatString: String,timezoneAbbr: String,localeIdentifier:String) -> String{
+        return m_toDasteString(formatString: formatString, timezone: TimeZone(abbreviation: timezoneAbbr)!, localeIdentifier: localeIdentifier)
     }
     
     
@@ -29,7 +29,7 @@ public extension Date {
     ///   - timezone: 时区
     ///   - localeIdentifier: the specified identifier.
     /// - Returns: 格式化的字符串
-    public func m_toDasteStringWithDateFormat(_ formatString: String,timezone: TimeZone,localeIdentifier:String) -> String{
+    public func m_toDasteString(formatString: String,timezone: TimeZone,localeIdentifier:String) -> String{
         let dataFormat = DateFormatter()
         dataFormat.locale = Locale(identifier: localeIdentifier)
         dataFormat.timeZone = timezone

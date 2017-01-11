@@ -47,7 +47,7 @@ public extension AVAsset {
         if let mediaSelectionGroup = self.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible){
             for option in mediaSelectionGroup.options {
                 if !option.hasMediaCharacteristic(AVMediaCharacteristicContainsOnlyForcedSubtitles) {
-                    if let localDisplayName = self.localDisplayName(forMediaSelectionOption: option){
+                    if let localDisplayName = self.m_localDisplayName(forMediaSelectionOption: option){
                         subtitles.append((option,localDisplayName))
                     }
                 }
@@ -64,7 +64,7 @@ public extension AVAsset {
         var audios = [(audio: AVMediaSelectionOption,localDisplayName: String)]()
         if let mediaSelectionGroup = self.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible){
             for option in mediaSelectionGroup.options {
-                if let localDisplayName = self.localDisplayName(forMediaSelectionOption: option){
+                if let localDisplayName = self.m_localDisplayName(forMediaSelectionOption: option){
                     audios.append((option,localDisplayName))
                 }
             }

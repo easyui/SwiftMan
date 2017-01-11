@@ -46,15 +46,20 @@ extension UIViewController {
             }
         }
         // 2. get current View Controller
-        let frontView = window.subviews[0]
-        let nextResponder = frontView.next
-        if (nextResponder is UIViewController) {
-            result = nextResponder as? UIViewController
+
+        result = window.rootViewController
+        
+        while let presentedVC = result?.presentedViewController {
+            result = presentedVC
         }
-        else {
-            result = window.rootViewController
+        if result is UITabBarController {
+            result = (result as? UITabBarController)?.selectedViewController
+        }
+        while result is UINavigationController && (result as? UINavigationController)?.topViewController != nil{
+            result = (result as? UINavigationController)?.topViewController
         }
         return result
+
     }
     
     public func m_isVisible() -> Bool {

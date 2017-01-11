@@ -11,6 +11,10 @@ import UIKit
 
 extension UIView {
     
+    
+    /// 截图
+    ///
+    /// - Returns: 截图
     public func m_snapshotImage() -> UIImage{
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
         if (self.responds(to: #selector(UIView.drawHierarchy(in:afterScreenUpdates:)))){
@@ -24,6 +28,7 @@ extension UIView {
     }
     
     
+    /// 删除subView
     public func removeSubviews() {
         for subview in subviews {
             subview.removeFromSuperview()
@@ -31,6 +36,7 @@ extension UIView {
     }
     
     
+    /// 调整view的长宽来包容所有subview（不递归）
     public func m_resizeToFitSubviews() {
         var width: CGFloat = 0
         var height: CGFloat = 0
@@ -45,8 +51,7 @@ extension UIView {
     }
     
     
-    
-    
+    /// 调整view的长宽来包容所有subview（递归）
     public func m_resizeToFitRecursiveSubviews() {
         var width: CGFloat = 0
         var height: CGFloat = 0
@@ -61,12 +66,15 @@ extension UIView {
         frame = CGRect(x: m_x, y: m_y, width: width, height: height)
     }
     
+    /// 自适应宽度
     public func m_resizeToFitWidth() {
         let currentHeight = self.m_height
         self.sizeToFit()
         self.m_height = currentHeight
     }
     
+    
+    /// 自适应高度
     public func m_resizeToFitHeight() {
         let currentWidth = self.m_width
         self.sizeToFit()

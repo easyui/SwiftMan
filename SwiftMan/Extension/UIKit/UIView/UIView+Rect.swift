@@ -84,7 +84,6 @@ extension UIView {
         }
     }
     
-    
     public var m_origin: CGPoint {
         get {
             return self.frame.origin
@@ -93,6 +92,13 @@ extension UIView {
         }
     }
     
+    public var m_size: CGSize {
+        get {
+            return self.frame.size
+        } set(value) {
+            self.frame = CGRect(origin: self.frame.origin, size: value)
+        }
+    }
     
     public var m_centerX: CGFloat {
         get {
@@ -112,13 +118,7 @@ extension UIView {
     }
     
     
-    public var m_size: CGSize {
-        get {
-            return self.frame.size
-        } set(value) {
-            self.frame = CGRect(origin: self.frame.origin, size: value)
-        }
-    }
+    
     
     // MARK: - view methods
     public var m_viewGetWidth: CGFloat{
@@ -204,11 +204,11 @@ extension UIView {
         }
         let superSize = parentView.frame.size;
         self.frame = CGRect(x: margins.left,
-                                y: margins.top,
-                                width: superSize.width - (margins.left + margins.right),
-                                height: superSize.height - (margins.top + margins.bottom));
+                            y: margins.top,
+                            width: superSize.width - (margins.left + margins.right),
+                            height: superSize.height - (margins.top + margins.bottom));
     }
     
     
-
+    
 }

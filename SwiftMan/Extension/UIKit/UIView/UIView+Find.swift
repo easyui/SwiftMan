@@ -11,6 +11,8 @@ import UIKit
 
 extension UIView {
     
+    
+    /// 返回view依赖的viewController
     public var m_viewController: UIViewController? {
         get {
             var responder = self as UIResponder
@@ -25,7 +27,11 @@ extension UIView {
     }
     
     
-    public func m_findSubViewWithClass(_ aClass: AnyClass) -> UIView? {
+    /// 查找aClass类型的subview（没递归）
+    ///
+    /// - Parameter aClass: 类的类型
+    /// - Returns: 查找aClass类型的subview
+    public func m_findSubView(aClass: AnyClass) -> UIView? {
         for subView in self.subviews {
             if (type(of: subView) === aClass) {
                 return subView
@@ -34,7 +40,12 @@ extension UIView {
         return nil
     }
     
-    public func  m_findSuperViewWithClass(_ aClass: AnyClass) -> UIView? {
+    
+    /// 查找aClass类型的superview
+    ///
+    /// - Parameter aClass: 类的类型
+    /// - Returns: 查找aClass类型的superview
+    public func  m_findSuperView(aClass: AnyClass) -> UIView? {
         guard let parentView = self.superview else {
             return nil
         }
@@ -42,7 +53,7 @@ extension UIView {
             return parentView
         }
         
-        return self.m_findSuperViewWithClass(aClass)
+        return self.m_findSuperView(aClass: aClass)
     }
     
     public func  m_findAndResignFirstResponder() -> Bool {

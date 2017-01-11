@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImage{
-    public static func m_imageWithColor(_ color: UIColor) -> UIImage
+    public static func m_image(color: UIColor) -> UIImage
     {
         let imageSize = CGSize(width: 1, height: 1);
         UIGraphicsBeginImageContextWithOptions(imageSize, true, 0);

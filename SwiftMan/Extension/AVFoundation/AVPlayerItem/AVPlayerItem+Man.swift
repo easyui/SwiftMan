@@ -39,7 +39,7 @@ public extension AVPlayerItem {
     /// 获取／设置当前cc
     public var m_selectedClosedCaptionOption:AVMediaSelectionOption?{
         get{
-            if let option = self.selectedMediaCharacteristicLegibleOption{
+            if let option = self.m_selectedMediaCharacteristicLegibleOption{
                 if option.mediaType == "clcp" {
                     return option
                 }
@@ -60,7 +60,7 @@ public extension AVPlayerItem {
     /// 获取／设置当前subtitle
     public var m_selectedSubtitleOption:AVMediaSelectionOption?{
         get{
-            if let option = self.selectedMediaCharacteristicLegibleOption{
+            if let option = self.m_selectedMediaCharacteristicLegibleOption{
                 if !option.hasMediaCharacteristic(AVMediaCharacteristicContainsOnlyForcedSubtitles) {
                     return option
                 }
