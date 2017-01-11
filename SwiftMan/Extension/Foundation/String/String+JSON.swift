@@ -17,7 +17,7 @@ extension String {
         }
         
         do {
-            let object: Any = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers,.mutableLeaves])
+            let object = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers,.mutableLeaves])
             return object
         } catch let aError as NSError {
             print(aError)

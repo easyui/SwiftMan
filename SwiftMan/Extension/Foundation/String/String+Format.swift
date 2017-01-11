@@ -42,10 +42,32 @@ extension String {
      return [dateFormat stringFromDate:date];
      }
      */
+    
+    /// 格式化字符串时间
+    ///
+    /// - Parameters:
+    ///   - formatString: 格式符
+    ///   - timezoneAbbr: The abbreviation for the time zone.
+    ///   - localeIdentifier: the specified identifier.
+    ///   - toDateFormat: 格式符
+    ///   - toTimezoneAbbr: The abbreviation for the time zone.
+    ///   - toLocaleIdentifier: the specified identifier.
+    /// - Returns: 格式化字符串时间
     public func m_toDasteStringWithDateFormat(_ formatString: String,timezoneAbbr: String,localeIdentifier:String,toDateFormat:String,toTimezoneAbbr:String,toLocaleIdentifier:String) -> String?{
         return m_toDasteStringWithDateFormat(formatString, timezone:  TimeZone(abbreviation: timezoneAbbr)!, localeIdentifier: localeIdentifier, toDateFormat: toDateFormat, toTimezone:  TimeZone(abbreviation: toTimezoneAbbr)!, toLocaleIdentifier: toLocaleIdentifier)
     }
     
+    
+    /// 格式化字符串时间
+    ///
+    /// - Parameters:
+    ///   - formatString: 格式符
+    ///   - timezone: 时区
+    ///   - localeIdentifier: the specified identifier.
+    ///   - toDateFormat: 格式符
+    ///   - toTimezone: 时区
+    ///   - toLocaleIdentifier: the specified identifier.
+    /// - Returns: 格式化字符串时间
     public func m_toDasteStringWithDateFormat(_ formatString: String,timezone: TimeZone,localeIdentifier:String,toDateFormat:String,toTimezone:TimeZone,toLocaleIdentifier:String) -> String?{
         let dataFormat = DateFormatter()
         dataFormat.locale = Locale(identifier: localeIdentifier)
