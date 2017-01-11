@@ -36,6 +36,10 @@
 		99B999161E25EE5200DBC4AA /* Timer+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999121E25EE5200DBC4AA /* Timer+Addition.swift */; };
 		99B999171E25EE5200DBC4AA /* Timer+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999131E25EE5200DBC4AA /* Timer+Block.swift */; };
 		99B999181E25EE5200DBC4AA /* URL+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999151E25EE5200DBC4AA /* URL+Man.swift */; };
+		99B9991E1E25F7CE00DBC4AA /* UINavigationController+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9991D1E25F7CE00DBC4AA /* UINavigationController+Man.swift */; };
+		99B999201E25F7EB00DBC4AA /* UINavigationBar+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9991F1E25F7EB00DBC4AA /* UINavigationBar+Man.swift */; };
+		99B999221E25F7F400DBC4AA /* UILable+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999211E25F7F400DBC4AA /* UILable+Man.swift */; };
+		99B999281E25F85D00DBC4AA /* UIScrollView+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999271E25F85D00DBC4AA /* UIScrollView+Man.swift */; };
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
 		DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */; };
 		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
@@ -95,6 +99,10 @@
 		99B999121E25EE5200DBC4AA /* Timer+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+Addition.swift"; sourceTree = "<group>"; };
 		99B999131E25EE5200DBC4AA /* Timer+Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+Block.swift"; sourceTree = "<group>"; };
 		99B999151E25EE5200DBC4AA /* URL+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Man.swift"; sourceTree = "<group>"; };
+		99B9991D1E25F7CE00DBC4AA /* UINavigationController+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Man.swift"; sourceTree = "<group>"; };
+		99B9991F1E25F7EB00DBC4AA /* UINavigationBar+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Man.swift"; sourceTree = "<group>"; };
+		99B999211E25F7F400DBC4AA /* UILable+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILable+Man.swift"; sourceTree = "<group>"; };
+		99B999271E25F85D00DBC4AA /* UIScrollView+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Man.swift"; sourceTree = "<group>"; };
 		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Man.swift"; sourceTree = "<group>"; };
 		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
@@ -212,6 +220,38 @@
 				99B999151E25EE5200DBC4AA /* URL+Man.swift */,
 			);
 			path = URL;
+			sourceTree = "<group>";
+		};
+		99B9991A1E25F79200DBC4AA /* UILable */ = {
+			isa = PBXGroup;
+			children = (
+				99B999211E25F7F400DBC4AA /* UILable+Man.swift */,
+			);
+			path = UILable;
+			sourceTree = "<group>";
+		};
+		99B9991B1E25F79200DBC4AA /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				99B9991F1E25F7EB00DBC4AA /* UINavigationBar+Man.swift */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		99B9991C1E25F79200DBC4AA /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				99B9991D1E25F7CE00DBC4AA /* UINavigationController+Man.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		99B999231E25F84700DBC4AA /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				99B999271E25F85D00DBC4AA /* UIScrollView+Man.swift */,
+			);
+			path = UIScrollView;
 			sourceTree = "<group>";
 		};
 		DD3F99B61D257AB30097F5D3 /* UIAlertController */ = {
@@ -338,11 +378,11 @@
 				DDA2A8AD1CD6EDAF00AAAB8C /* UIColor */,
 				DDA2A8AF1CD6EDAF00AAAB8C /* UIDevice */,
 				DDA2A8B01CD6EDAF00AAAB8C /* UIImage */,
-				DDA2A8B21CD6EDAF00AAAB8C /* UILable */,
-				DDA2A8B31CD6EDAF00AAAB8C /* UINavigationBar */,
-				DDA2A8B41CD6EDAF00AAAB8C /* UINavigationController */,
+				99B9991A1E25F79200DBC4AA /* UILable */,
+				99B9991B1E25F79200DBC4AA /* UINavigationBar */,
+				99B9991C1E25F79200DBC4AA /* UINavigationController */,
 				DDA2A8B51CD6EDAF00AAAB8C /* UIScreen */,
-				DDA2A8B71CD6EDAF00AAAB8C /* UIScrollView */,
+				99B999231E25F84700DBC4AA /* UIScrollView */,
 				DDA2A8B81CD6EDAF00AAAB8C /* UIView */,
 				DDA2A8B91CD6EDAF00AAAB8C /* UIViewController */,
 				DDA2A8BA1CD6EDAF00AAAB8C /* UIWindow */,
@@ -382,40 +422,12 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
-		DDA2A8B21CD6EDAF00AAAB8C /* UILable */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UILable;
-			sourceTree = "<group>";
-		};
-		DDA2A8B31CD6EDAF00AAAB8C /* UINavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UINavigationBar;
-			sourceTree = "<group>";
-		};
-		DDA2A8B41CD6EDAF00AAAB8C /* UINavigationController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UINavigationController;
-			sourceTree = "<group>";
-		};
 		DDA2A8B51CD6EDAF00AAAB8C /* UIScreen */ = {
 			isa = PBXGroup;
 			children = (
 				DDA2A8B61CD6EDAF00AAAB8C /* UIScreen+Man.swift */,
 			);
 			path = UIScreen;
-			sourceTree = "<group>";
-		};
-		DDA2A8B71CD6EDAF00AAAB8C /* UIScrollView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIScrollView;
 			sourceTree = "<group>";
 		};
 		DDA2A8B81CD6EDAF00AAAB8C /* UIView */ = {
@@ -601,15 +613,19 @@
 				DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */,
 				99B999081E25EE0100DBC4AA /* String+URL.swift in Sources */,
 				DDED9F001CDA0F1900E196EB /* Dictionary+Man.swift in Sources */,
+				99B999281E25F85D00DBC4AA /* UIScrollView+Man.swift in Sources */,
 				DDAEC8701D3D33890038F7EA /* UIViewController+UIViewController+NavigationBar.swift in Sources */,
 				DDED9EFE1CDA0F0000E196EB /* Array+Man.swift in Sources */,
 				DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */,
 				99B999181E25EE5200DBC4AA /* URL+Man.swift in Sources */,
 				DDAEEA9B1D3C9C5400525126 /* UIView+Find.swift in Sources */,
 				99B998F11E25E71200DBC4AA /* Bundle+Man.swift in Sources */,
+				99B9991E1E25F7CE00DBC4AA /* UINavigationController+Man.swift in Sources */,
 				99B998F01E25E71200DBC4AA /* Bundle+AppIcon.swift in Sources */,
 				99B998F91E25E93900DBC4AA /* Date+Format.swift in Sources */,
 				DDED9EE91CD9C61B00E196EB /* UIButton+Man.swift in Sources */,
+				99B999221E25F7F400DBC4AA /* UILable+Man.swift in Sources */,
+				99B999201E25F7EB00DBC4AA /* UINavigationBar+Man.swift in Sources */,
 				99B998F41E25E74300DBC4AA /* Data+Man.swift in Sources */,
 				99B998F81E25E93900DBC4AA /* Date+Comparable.swift in Sources */,
 				DDA2A8BC1CD6EDAF00AAAB8C /* UIColor+Man.swift in Sources */,

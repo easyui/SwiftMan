@@ -31,7 +31,7 @@ extension Timer {
     
     public static func m_executeOnMainQueueAfter(seconds: TimeInterval,block: @escaping ()->()) {
         
-        m_executeAfterTimeInterval(seconds, queue: DispatchQueue.main, block: block)
+        m_executeAfter(seconds: seconds, queue: DispatchQueue.main, block: block)
     }
     
     public static func m_executeAfter(seconds: TimeInterval, queue: DispatchQueue, block: @escaping ()->()) {

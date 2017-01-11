@@ -24,8 +24,11 @@ extension Timer {
         self.fireDate = Date()
     }
     
-    //延迟开始NSTimer
-    public func m_resumeTimerAfterTimeInterval(_ seconds: TimeInterval){
+    
+    /// 延迟开始NSTimer
+    ///
+    /// - Parameter seconds: 秒
+    public func m_resumeTimerAfter(seconds: TimeInterval){
         guard self.isValid  else{
             return
         }

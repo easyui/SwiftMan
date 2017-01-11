@@ -29,6 +29,11 @@ extension UIButton{
     }
     
     
+    /// 设置按钮背景颜色
+    ///
+    /// - Parameters:
+    ///   - color: 背景颜色
+    ///   - forState: 按钮状态
     public func m_setBackgroundColor(_ color: UIColor, forState: UIControlState) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()?.setFillColor(color.cgColor)
