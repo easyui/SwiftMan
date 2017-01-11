@@ -26,20 +26,25 @@ public struct AppInfos {
     }
 
 
+    
+    /// Info.plist 格式的版本信息
     public static var targetedVersion: String? {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleInfoDictionaryVersion") as? String
     }
     
-    // app's version number
+    
+    /// 发布版本号(app's version number)
     public static var appVersion: String? {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
     }
     
-    // app's build number
+    /// 内部版本号(app's build number)
     public static var appBuild: String? {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
     }
     
+    
+    /// 运营商名字
     public static var carrierName: String? {
         let netinfo = CTTelephonyNetworkInfo()
         let carrier = netinfo.subscriberCellularProvider
@@ -56,7 +61,7 @@ public struct AppInfos {
         return String(cString: machine)
     }
     
-    // Returns true if DEBUG mode is active //TODO: Add to readme
+
     public static var isDebug: Bool {
         #if DEBUG
             return true
@@ -65,12 +70,13 @@ public struct AppInfos {
         #endif
     }
     
-    // Returns true if RELEASE mode is active //TODO: Add to readme
+
     public static var isRelease: Bool {
        return !isDebug
     }
     
-    // Returns true if its simulator and not a device
+
+    /// 是模拟器
     public static var isSimulator: Bool {
         #if (arch(i386) || arch(x86_64)) && os(iOS)
             return true
@@ -79,7 +85,7 @@ public struct AppInfos {
         #endif
     }
     
-    // true if its on a device and not a simulator
+    /// 是设备
     public static var isDevice: Bool {
         return !isSimulator
     }

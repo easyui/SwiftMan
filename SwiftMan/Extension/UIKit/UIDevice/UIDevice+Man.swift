@@ -19,6 +19,16 @@ extension UIDevice {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }
     
-
+    @available(iOS 9.0, *)
+    public static var  n_isTV: Bool {
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.tv
+    }
+    
+    @available(iOS 9.0, *)
+    public static var  n_isCar: Bool {
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.carPlay
+    }
+    
+    
     
 }
