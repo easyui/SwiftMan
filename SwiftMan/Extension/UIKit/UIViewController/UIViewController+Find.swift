@@ -41,6 +41,7 @@ extension UIViewController {
             for tmpWin in windows {
                 if tmpWin.windowLevel == UIWindowLevelNormal {
                     window = tmpWin
+                    break
                 }
             }
         }
