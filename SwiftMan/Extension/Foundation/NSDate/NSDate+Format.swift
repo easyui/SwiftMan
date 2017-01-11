@@ -2,8 +2,8 @@
 //  NSDate+Man.swift
 //  SwiftMan
 //
-//  Created by neu on 16/5/4.
-//  Copyright © 2016年 cactus. All rights reserved.
+//  Created by yangjun on 16/5/4.
+//  Copyright © 2016年 yangjun. All rights reserved.
 //
 
 import Foundation

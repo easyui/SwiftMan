@@ -27,8 +27,8 @@
 		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
 		DD6651281CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */; };
 		DD66512C1CD8EC7600C81C38 /* CGRect+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */; };
-		DD66512E1CD8F5C800C81C38 /* NSBundle+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512D1CD8F5C800C81C38 /* NSBundle+Man.swift */; };
-		DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512F1CD90AA000C81C38 /* NSBundle+AppIcon.swift */; };
+		DD66512E1CD8F5C800C81C38 /* Bundle+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512D1CD8F5C800C81C38 /* Bundle+Man.swift */; };
+		DD6651301CD90AA000C81C38 /* Bundle+AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512F1CD90AA000C81C38 /* Bundle+AppIcon.swift */; };
 		DD6651321CD9103E00C81C38 /* NSObject+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651311CD9103E00C81C38 /* NSObject+Man.swift */; };
 		DD6651341CD9123000C81C38 /* NSTimer+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651331CD9123000C81C38 /* NSTimer+Block.swift */; };
 		DD9778821CD3031500BA2076 /* SwiftMan.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9778811CD3031500BA2076 /* SwiftMan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,8 +83,8 @@
 		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
 		DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftManTestsUIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Man.swift"; sourceTree = "<group>"; };
-		DD66512D1CD8F5C800C81C38 /* NSBundle+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Man.swift"; sourceTree = "<group>"; };
-		DD66512F1CD90AA000C81C38 /* NSBundle+AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+AppIcon.swift"; sourceTree = "<group>"; };
+		DD66512D1CD8F5C800C81C38 /* Bundle+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Man.swift"; sourceTree = "<group>"; };
+		DD66512F1CD90AA000C81C38 /* Bundle+AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+AppIcon.swift"; sourceTree = "<group>"; };
 		DD6651311CD9103E00C81C38 /* NSObject+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Man.swift"; sourceTree = "<group>"; };
 		DD6651331CD9123000C81C38 /* NSTimer+Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Block.swift"; sourceTree = "<group>"; };
 		DD97787E1CD3031500BA2076 /* SwiftMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,8 +247,8 @@
 		DDA2A8A11CD6EDAF00AAAB8C /* NSBundle */ = {
 			isa = PBXGroup;
 			children = (
-				DD66512D1CD8F5C800C81C38 /* NSBundle+Man.swift */,
-				DD66512F1CD90AA000C81C38 /* NSBundle+AppIcon.swift */,
+				DD66512D1CD8F5C800C81C38 /* Bundle+Man.swift */,
+				DD66512F1CD90AA000C81C38 /* Bundle+AppIcon.swift */,
 			);
 			path = NSBundle;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 				DDAEC8701D3D33890038F7EA /* UIViewController+UIViewController+NavigationBar.swift in Sources */,
 				DDED9EFC1CD9FC7100E196EB /* String+URL.swift in Sources */,
 				DDED9EFE1CDA0F0000E196EB /* Array+Man.swift in Sources */,
-				DD6651301CD90AA000C81C38 /* NSBundle+AppIcon.swift in Sources */,
+				DD6651301CD90AA000C81C38 /* Bundle+AppIcon.swift in Sources */,
 				DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */,
 				DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */,
 				DDAEEA9B1D3C9C5400525126 /* UIView+Find.swift in Sources */,
@@ -615,7 +615,7 @@
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDAEEA971D3C7C7000525126 /* UIView+Rect.swift in Sources */,
 				DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */,
-				DD66512E1CD8F5C800C81C38 /* NSBundle+Man.swift in Sources */,
+				DD66512E1CD8F5C800C81C38 /* Bundle+Man.swift in Sources */,
 				DDAEC86E1D3D1A320038F7EA /* UIViewController+Find.swift in Sources */,
 				DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */,
 				DDAEEA991D3C9BC300525126 /* UIView+Man.swift in Sources */,
