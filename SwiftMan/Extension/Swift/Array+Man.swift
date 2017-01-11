@@ -19,7 +19,7 @@ extension Array {
     
     /// 转JSON
     ///
-    /// - Returns: 可选的JSON字符串
+    /// - Returns: 可选的一行JSON字符串
     public func m_JSONStringRepresentation()  -> String?{
         return JSONStringWithOption([])
     }
