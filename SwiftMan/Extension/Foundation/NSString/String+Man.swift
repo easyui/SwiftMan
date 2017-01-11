@@ -9,12 +9,12 @@
 import Foundation
 
 extension String {
-    //去掉前后空格
+    ///去掉自己前后空格
     public mutating func m_trim() {
         self = self.m_trimmed()
     }
     
-    //
+    //／返回去掉前后空格的字符串
     public func m_trimmed() -> String {
         let set : CharacterSet = CharacterSet.whitespacesAndNewlines
         return self.trimmingCharacters(in: set)

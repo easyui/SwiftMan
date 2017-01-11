@@ -8,10 +8,13 @@
 
 import Foundation
  extension NSObject {
+    
+    /// 类名
     public var m_className: String {
         return type(of: self).m_className
     }
     
+    /// 类名
     public static var m_className: String {
         return String(describing: self)
     }
