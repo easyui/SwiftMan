@@ -7,6 +7,7 @@
 //
 
 extension NSDate: Comparable {}
+
 //  Returns if dates are equal to each other
 public func == (lhs: NSDate, rhs: NSDate) -> Bool {
     return (lhs == rhs)

@@ -22,13 +22,18 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		99B998F01E25E71200DBC4AA /* Bundle+AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998EE1E25E71200DBC4AA /* Bundle+AppIcon.swift */; };
+		99B998F11E25E71200DBC4AA /* Bundle+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998EF1E25E71200DBC4AA /* Bundle+Man.swift */; };
+		99B998F41E25E74300DBC4AA /* Data+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998F31E25E74300DBC4AA /* Data+Man.swift */; };
+		99B998F81E25E93900DBC4AA /* Date+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998F61E25E93900DBC4AA /* Date+Comparable.swift */; };
+		99B998F91E25E93900DBC4AA /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998F71E25E93900DBC4AA /* Date+Format.swift */; };
+		99B998FC1E25EA5F00DBC4AA /* NotificationCenter+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998FB1E25EA5F00DBC4AA /* NotificationCenter+Man.swift */; };
+		99B998FF1E25EAE000DBC4AA /* NSNull+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998FE1E25EAE000DBC4AA /* NSNull+Man.swift */; };
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
 		DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */; };
 		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
 		DD6651281CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */; };
 		DD66512C1CD8EC7600C81C38 /* CGRect+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */; };
-		DD66512E1CD8F5C800C81C38 /* Bundle+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512D1CD8F5C800C81C38 /* Bundle+Man.swift */; };
-		DD6651301CD90AA000C81C38 /* Bundle+AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66512F1CD90AA000C81C38 /* Bundle+AppIcon.swift */; };
 		DD6651321CD9103E00C81C38 /* NSObject+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651311CD9103E00C81C38 /* NSObject+Man.swift */; };
 		DD6651341CD9123000C81C38 /* NSTimer+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6651331CD9123000C81C38 /* NSTimer+Block.swift */; };
 		DD9778821CD3031500BA2076 /* SwiftMan.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9778811CD3031500BA2076 /* SwiftMan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,8 +55,6 @@
 		DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EEA1CD9CCC000E196EB /* UIWindow+Man.swift */; };
 		DDED9EEE1CD9D11800E196EB /* Bool+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EED1CD9D11800E196EB /* Bool+Man.swift */; };
 		DDED9EF01CD9D25800E196EB /* AppInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EEF1CD9D25800E196EB /* AppInfos.swift */; };
-		DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */; };
-		DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */; };
 		DDED9EF61CD9EBBD00E196EB /* String+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF51CD9EBBD00E196EB /* String+Man.swift */; };
 		DDED9EF81CD9F13D00E196EB /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF71CD9F13D00E196EB /* String+Format.swift */; };
 		DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED9EF91CD9FC5D00E196EB /* String+JSON.swift */; };
@@ -78,13 +81,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99B998EE1E25E71200DBC4AA /* Bundle+AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+AppIcon.swift"; sourceTree = "<group>"; };
+		99B998EF1E25E71200DBC4AA /* Bundle+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Man.swift"; sourceTree = "<group>"; };
+		99B998F31E25E74300DBC4AA /* Data+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Man.swift"; sourceTree = "<group>"; };
+		99B998F61E25E93900DBC4AA /* Date+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Comparable.swift"; sourceTree = "<group>"; };
+		99B998F71E25E93900DBC4AA /* Date+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		99B998FB1E25EA5F00DBC4AA /* NotificationCenter+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Man.swift"; sourceTree = "<group>"; };
+		99B998FE1E25EAE000DBC4AA /* NSNull+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNull+Man.swift"; sourceTree = "<group>"; };
 		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Man.swift"; sourceTree = "<group>"; };
 		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
 		DD6651271CD8A60300C81C38 /* SwiftManTestsUIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftManTestsUIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD66512B1CD8EC7600C81C38 /* CGRect+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Man.swift"; sourceTree = "<group>"; };
-		DD66512D1CD8F5C800C81C38 /* Bundle+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Man.swift"; sourceTree = "<group>"; };
-		DD66512F1CD90AA000C81C38 /* Bundle+AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+AppIcon.swift"; sourceTree = "<group>"; };
 		DD6651311CD9103E00C81C38 /* NSObject+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Man.swift"; sourceTree = "<group>"; };
 		DD6651331CD9123000C81C38 /* NSTimer+Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Block.swift"; sourceTree = "<group>"; };
 		DD97787E1CD3031500BA2076 /* SwiftMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +117,6 @@
 		DDED9EEA1CD9CCC000E196EB /* UIWindow+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Man.swift"; sourceTree = "<group>"; };
 		DDED9EED1CD9D11800E196EB /* Bool+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Man.swift"; sourceTree = "<group>"; };
 		DDED9EEF1CD9D25800E196EB /* AppInfos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfos.swift; sourceTree = "<group>"; };
-		DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Format.swift"; sourceTree = "<group>"; };
-		DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Comparable.swift"; sourceTree = "<group>"; };
 		DDED9EF51CD9EBBD00E196EB /* String+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Man.swift"; sourceTree = "<group>"; };
 		DDED9EF71CD9F13D00E196EB /* String+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
 		DDED9EF91CD9FC5D00E196EB /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JSON.swift"; sourceTree = "<group>"; };
@@ -138,6 +144,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99B998ED1E25E71200DBC4AA /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				99B998EE1E25E71200DBC4AA /* Bundle+AppIcon.swift */,
+				99B998EF1E25E71200DBC4AA /* Bundle+Man.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		99B998F21E25E72500DBC4AA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				99B998F31E25E74300DBC4AA /* Data+Man.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		99B998F51E25E93900DBC4AA /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				99B998F61E25E93900DBC4AA /* Date+Comparable.swift */,
+				99B998F71E25E93900DBC4AA /* Date+Format.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		99B998FA1E25EA5F00DBC4AA /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				99B998FB1E25EA5F00DBC4AA /* NotificationCenter+Man.swift */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		99B998FD1E25EAE000DBC4AA /* NSNull */ = {
+			isa = PBXGroup;
+			children = (
+				99B998FE1E25EAE000DBC4AA /* NSNull+Man.swift */,
+			);
+			path = NSNull;
+			sourceTree = "<group>";
+		};
 		DD3F99B61D257AB30097F5D3 /* UIAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,56 +279,17 @@
 		DDA2A8A01CD6EDAF00AAAB8C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				DDA2A8A11CD6EDAF00AAAB8C /* NSBundle */,
-				DDA2A8A21CD6EDAF00AAAB8C /* NSData */,
-				DDA2A8A31CD6EDAF00AAAB8C /* NSDate */,
-				DDA2A8A41CD6EDAF00AAAB8C /* NSNotificationCenter */,
-				DDA2A8A51CD6EDAF00AAAB8C /* NSNull */,
+				99B998ED1E25E71200DBC4AA /* Bundle */,
+				99B998F21E25E72500DBC4AA /* Data */,
+				99B998F51E25E93900DBC4AA /* Date */,
+				99B998FA1E25EA5F00DBC4AA /* NotificationCenter */,
+				99B998FD1E25EAE000DBC4AA /* NSNull */,
 				DDA2A8A61CD6EDAF00AAAB8C /* NSObject */,
 				DDA2A8A71CD6EDAF00AAAB8C /* NSString */,
 				DDA2A8A81CD6EDAF00AAAB8C /* NSTimer */,
 				DDA2A8A91CD6EDAF00AAAB8C /* NSURL */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		DDA2A8A11CD6EDAF00AAAB8C /* NSBundle */ = {
-			isa = PBXGroup;
-			children = (
-				DD66512D1CD8F5C800C81C38 /* Bundle+Man.swift */,
-				DD66512F1CD90AA000C81C38 /* Bundle+AppIcon.swift */,
-			);
-			path = NSBundle;
-			sourceTree = "<group>";
-		};
-		DDA2A8A21CD6EDAF00AAAB8C /* NSData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NSData;
-			sourceTree = "<group>";
-		};
-		DDA2A8A31CD6EDAF00AAAB8C /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				DDED9EF11CD9E1CC00E196EB /* NSDate+Format.swift */,
-				DDED9EF31CD9E20B00E196EB /* NSDate+Comparable.swift */,
-			);
-			path = NSDate;
-			sourceTree = "<group>";
-		};
-		DDA2A8A41CD6EDAF00AAAB8C /* NSNotificationCenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NSNotificationCenter;
-			sourceTree = "<group>";
-		};
-		DDA2A8A51CD6EDAF00AAAB8C /* NSNull */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NSNull;
 			sourceTree = "<group>";
 		};
 		DDA2A8A61CD6EDAF00AAAB8C /* NSObject */ = {
@@ -587,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B998FF1E25EAE000DBC4AA /* NSNull+Man.swift in Sources */,
 				DD66512C1CD8EC7600C81C38 /* CGRect+Man.swift in Sources */,
 				DDED9EE61CD9C3C300E196EB /* NSURL+Man.swift in Sources */,
 				DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */,
@@ -595,27 +605,29 @@
 				DDAEC8701D3D33890038F7EA /* UIViewController+UIViewController+NavigationBar.swift in Sources */,
 				DDED9EFC1CD9FC7100E196EB /* String+URL.swift in Sources */,
 				DDED9EFE1CDA0F0000E196EB /* Array+Man.swift in Sources */,
-				DD6651301CD90AA000C81C38 /* Bundle+AppIcon.swift in Sources */,
 				DDED9EFA1CD9FC5D00E196EB /* String+JSON.swift in Sources */,
 				DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */,
 				DDAEEA9B1D3C9C5400525126 /* UIView+Find.swift in Sources */,
-				DDED9EF21CD9E1CC00E196EB /* NSDate+Format.swift in Sources */,
-				DDED9EF41CD9E20B00E196EB /* NSDate+Comparable.swift in Sources */,
+				99B998F11E25E71200DBC4AA /* Bundle+Man.swift in Sources */,
+				99B998F01E25E71200DBC4AA /* Bundle+AppIcon.swift in Sources */,
 				DDED9EF61CD9EBBD00E196EB /* String+Man.swift in Sources */,
+				99B998F91E25E93900DBC4AA /* Date+Format.swift in Sources */,
 				DDED9EE91CD9C61B00E196EB /* UIButton+Man.swift in Sources */,
 				DDED9EF81CD9F13D00E196EB /* String+Format.swift in Sources */,
 				DD6651341CD9123000C81C38 /* NSTimer+Block.swift in Sources */,
+				99B998F41E25E74300DBC4AA /* Data+Man.swift in Sources */,
+				99B998F81E25E93900DBC4AA /* Date+Comparable.swift in Sources */,
 				DDA2A8BC1CD6EDAF00AAAB8C /* UIColor+Man.swift in Sources */,
 				DDED9EEE1CD9D11800E196EB /* Bool+Man.swift in Sources */,
 				DDED9EF01CD9D25800E196EB /* AppInfos.swift in Sources */,
 				DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */,
+				99B998FC1E25EA5F00DBC4AA /* NotificationCenter+Man.swift in Sources */,
 				DDAEC86C1D3D1A210038F7EA /* UIViewController+Man.swift in Sources */,
 				DD6651321CD9103E00C81C38 /* NSObject+Man.swift in Sources */,
 				DDA2A8BB1CD6EDAF00AAAB8C /* UIApplication+Man.swift in Sources */,
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDAEEA971D3C7C7000525126 /* UIView+Rect.swift in Sources */,
 				DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */,
-				DD66512E1CD8F5C800C81C38 /* Bundle+Man.swift in Sources */,
 				DDAEC86E1D3D1A320038F7EA /* UIViewController+Find.swift in Sources */,
 				DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */,
 				DDAEEA991D3C9BC300525126 /* UIView+Man.swift in Sources */,
