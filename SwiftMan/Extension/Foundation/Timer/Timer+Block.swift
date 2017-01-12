@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Timer {
+public extension Timer {
     
     public class func m_scheduledTimer(timeInterval: TimeInterval, block: ()->(),  repeats: Bool) -> Timer{
         return self.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(Timer.executeBlockWithTimer(_:)), userInfo: unsafeBitCast(block, to: AnyObject.self), repeats: repeats)

@@ -8,7 +8,7 @@
 import UIKit
 
 
-extension UIApplication{
+public extension UIApplication{
 
     public var m_applicationFileSize: String {
         func sizeOfFolderPath(_ folderPath: String) -> Int64 {

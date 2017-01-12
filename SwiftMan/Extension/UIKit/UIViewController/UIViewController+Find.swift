@@ -10,7 +10,7 @@
 import UIKit
 
 
-extension UIViewController {
+public extension UIViewController {
     
     public func m_topMostController() -> UIViewController {
         var topController: UIViewController = self

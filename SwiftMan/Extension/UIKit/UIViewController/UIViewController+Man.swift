@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     // MARK: - add / remove
     public func m_displayController(_ controller: UIViewController, frame: CGRect) {
@@ -23,6 +23,8 @@ extension UIViewController {
         controller.view.removeFromSuperview()
         controller.removeFromParentViewController()
     }
+    
+
     
     // MARK: - status bar
     public var  m_statusBarHeight: CGFloat {

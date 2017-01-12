@@ -9,13 +9,50 @@
 import UIKit
 
 
-extension UIView {
+public extension UIView {
     
+    @IBInspectable
+    public var m_borderColor: UIColor? {
+        get {
+            guard let color = layer.borderColor else {
+                return nil
+            }
+            return UIColor(cgColor: color)
+        }
+        set {
+            guard let color = newValue else {
+                layer.borderColor = nil
+                return
+            }
+            layer.borderColor = color.cgColor
+        }
+    }
+    
+    @IBInspectable
+    public var m_borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    
+    /// load view from xib
+    ///
+    /// - Parameters:
+    ///   - named: xib的名字
+    ///   - bundle: bundle，默认为空
+    /// - Returns: view
+    public class func m_loadFromNib(named: String, bundle : Bundle? = nil) -> UIView? {
+        return UINib(nibName: named, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
+    }
     
     /// 截图
     ///
     /// - Returns: 截图
-    public func m_snapshotImage() -> UIImage{
+    public func m_snapshotImage() -> UIImage?{
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
         if (self.responds(to: #selector(UIView.drawHierarchy(in:afterScreenUpdates:)))){
             self.drawHierarchy(in: bounds, afterScreenUpdates: false)
@@ -24,17 +61,19 @@ extension UIView {
         }
         let snapshotImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return snapshotImage!
+        return snapshotImage
     }
     
     
     /// 删除subView
     public func removeSubviews() {
-        for subview in subviews {
-            subview.removeFromSuperview()
-        }
+        self.subviews.forEach({$0.removeFromSuperview()})
     }
     
+    /// 删除手势
+    public func removeGestureRecognizers() {
+        gestureRecognizers?.forEach(removeGestureRecognizer)
+    }
     
     /// 调整view的长宽来包容所有subview（不递归）
     public func m_resizeToFitSubviews() {

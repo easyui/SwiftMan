@@ -7,7 +7,7 @@
 //
 
 import Foundation
- extension NSObject {
+ public extension NSObject {
     
     /// 类名
     public var m_className: String {

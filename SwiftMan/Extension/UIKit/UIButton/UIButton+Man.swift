@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButton{
+public extension UIButton{
     
     public convenience init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, target: AnyObject, action: Selector) {
         self.init(frame:CGRect(x: x, y: y, width: width, height: height), target:target,action:action,controlEvents:UIControlEvents.touchUpInside)

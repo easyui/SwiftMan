@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIScreen {
+public extension UIScreen {
 
     
     public var m_mainScreenLongSide: CGFloat {

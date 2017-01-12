@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIView {
+public extension UIView {
     
     
     /// 返回view依赖的viewController

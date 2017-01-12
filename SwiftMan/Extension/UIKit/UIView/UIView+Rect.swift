@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIView {
+public extension UIView {
     
     // MARK: -  Frame get/set shorthand
     

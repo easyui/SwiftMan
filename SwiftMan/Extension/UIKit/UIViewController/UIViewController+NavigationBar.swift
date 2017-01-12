@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIViewController{
+public extension UIViewController{
     fileprivate struct AssociatedKeys {
         static var SwitchEffectKey = "SwitchEffectKey"
         static var LeftActionBlockKey = "LeftActionBlockKey"

@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension String {
+public extension String {
     //
     public func m_JSONObject() -> Any? {
         guard let data = self.data(using: String.Encoding.utf8) else{

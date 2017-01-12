@@ -7,8 +7,9 @@
 //
 
 import Foundation
-extension Bool {
-    public mutating func m_toggle() -> Bool {
+public extension Bool {
+    
+    @discardableResult public mutating func m_toggle() -> Bool {
         self = !self
         return self
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Dictionary {
+public extension Dictionary {
     
     /// 转JSON
     ///
@@ -27,7 +27,7 @@ extension Dictionary {
     /// 转JSON
     ///
     /// - Returns: 可选的JSON字符串
-    fileprivate func JSONString(option: JSONSerialization.WritingOptions) -> String?{
+    private func JSONString(option: JSONSerialization.WritingOptions) -> String?{
         do{
             let data = try JSONSerialization.data(withJSONObject: self, options: option)
             return  String(data: data, encoding: String.Encoding.utf8)

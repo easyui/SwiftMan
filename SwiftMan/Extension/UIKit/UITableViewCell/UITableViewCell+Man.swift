@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UITableViewCell{
+public extension UITableViewCell{
     public static func m_nib() -> UINib {
         return  UINib(nibName: String(describing: self), bundle: nil)
     }

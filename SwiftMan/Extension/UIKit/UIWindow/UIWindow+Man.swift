@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIWindow {
+public extension UIWindow {
     
     
     public func m_topMostController() -> UIViewController? {
