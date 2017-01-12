@@ -51,7 +51,7 @@ Run `carthage update` to build the framework and drag the built `SwiftMan.framew
 $ gem install cocoapods
 ```
 
-To integrate SwifterSwift into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate SwiftMan into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
