@@ -16,6 +16,10 @@
 
 Swift extensions and utils classes
 
+## Preview
+
+![SwiftMan](preview.png)
+
 ## Installation
 
 ### ExportFramework
