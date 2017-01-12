@@ -52,6 +52,7 @@
 		99B9994D1E268B6E00DBC4AA /* UISearchBar+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9994C1E268B6E00DBC4AA /* UISearchBar+Man.swift */; };
 		99B999501E269B9700DBC4AA /* UIImageView+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9994F1E269B9700DBC4AA /* UIImageView+Man.swift */; };
 		99B999531E26A3B100DBC4AA /* UICollectionView+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999521E26A3B100DBC4AA /* UICollectionView+Man.swift */; };
+		99B999791E27684200DBC4AA /* AVPlayer+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999781E27684200DBC4AA /* AVPlayer+Man.swift */; };
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
 		DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */; };
 		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
@@ -127,6 +128,7 @@
 		99B9994C1E268B6E00DBC4AA /* UISearchBar+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Man.swift"; sourceTree = "<group>"; };
 		99B9994F1E269B9700DBC4AA /* UIImageView+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Man.swift"; sourceTree = "<group>"; };
 		99B999521E26A3B100DBC4AA /* UICollectionView+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Man.swift"; sourceTree = "<group>"; };
+		99B999781E27684200DBC4AA /* AVPlayer+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Man.swift"; sourceTree = "<group>"; };
 		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Man.swift"; sourceTree = "<group>"; };
 		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 		99B9992A1E26077800DBC4AA /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				99B999771E27681100DBC4AA /* AVPlayer */,
 				99B9992B1E26077800DBC4AA /* AVAsset */,
 				99B9992D1E26077800DBC4AA /* AVPlayerItem */,
 			);
@@ -365,6 +368,14 @@
 				99B999521E26A3B100DBC4AA /* UICollectionView+Man.swift */,
 			);
 			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		99B999771E27681100DBC4AA /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				99B999781E27684200DBC4AA /* AVPlayer+Man.swift */,
+			);
+			path = AVPlayer;
 			sourceTree = "<group>";
 		};
 		DD3F99B61D257AB30097F5D3 /* UIAlertController */ = {
@@ -776,6 +787,7 @@
 				99B999531E26A3B100DBC4AA /* UICollectionView+Man.swift in Sources */,
 				99B999471E26893A00DBC4AA /* UITabBar+Man.swift in Sources */,
 				DDAEC86E1D3D1A320038F7EA /* UIViewController+Find.swift in Sources */,
+				99B999791E27684200DBC4AA /* AVPlayer+Man.swift in Sources */,
 				99B999301E26077800DBC4AA /* AVPlayerItem+Man.swift in Sources */,
 				99B9993F1E263B9E00DBC4AA /* UITextField+Man.swift in Sources */,
 				99B999071E25EE0100DBC4AA /* String+Man.swift in Sources */,
