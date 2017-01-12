@@ -9,6 +9,7 @@
 import XCTest
 
 class SwiftManTestsUIDevice_Man: XCTestCase {
+    
     func testPrintSomeAttributes() {
    
         print("start--------")
