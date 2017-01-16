@@ -43,6 +43,30 @@ public struct AppInfos {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
     }
     
+    /// 系统版本号(ex 10.0.2)
+    public static var osVersion: String? {
+        let version = ProcessInfo.processInfo.operatingSystemVersion
+        return "\(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
+    }
+    
+    
+    /// 系统名字
+    public static var osName: String? {
+            #if os(iOS)
+                return "iOS"
+            #elseif os(watchOS)
+                return "watchOS"
+            #elseif os(tvOS)
+                return "tvOS"
+            #elseif os(macOS)
+                return "OS X"
+            #elseif os(Linux)
+                return "Linux"
+            #else
+                return "Unknown"
+            #endif
+    }
+    
     
     /// 运营商名字
     public static var carrierName: String? {
