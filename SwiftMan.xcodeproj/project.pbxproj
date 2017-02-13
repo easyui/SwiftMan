@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		9918CD141E5217F8000EC0A6 /* DayTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918CD131E5217F8000EC0A6 /* DayTimeCalculator.swift */; };
 		99A347BC1E517827005C7CBE /* ExternalScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A347BB1E517827005C7CBE /* ExternalScreenManager.swift */; };
 		99B998F01E25E71200DBC4AA /* Bundle+AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998EE1E25E71200DBC4AA /* Bundle+AppIcon.swift */; };
 		99B998F11E25E71200DBC4AA /* Bundle+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998EF1E25E71200DBC4AA /* Bundle+Man.swift */; };
@@ -101,6 +102,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9918CD131E5217F8000EC0A6 /* DayTimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTimeCalculator.swift; sourceTree = "<group>"; };
 		99A347BB1E517827005C7CBE /* ExternalScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalScreenManager.swift; sourceTree = "<group>"; };
 		99B998EE1E25E71200DBC4AA /* Bundle+AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+AppIcon.swift"; sourceTree = "<group>"; };
 		99B998EF1E25E71200DBC4AA /* Bundle+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Man.swift"; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			children = (
 				DDED9EEF1CD9D25800E196EB /* AppInfos.swift */,
 				99A347BB1E517827005C7CBE /* ExternalScreenManager.swift */,
+				9918CD131E5217F8000EC0A6 /* DayTimeCalculator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				99B9993C1E263B5B00DBC4AA /* UITextView+Man.swift in Sources */,
 				DDA2A8BB1CD6EDAF00AAAB8C /* UIApplication+Man.swift in Sources */,
 				99B999051E25EE0100DBC4AA /* String+Format.swift in Sources */,
+				9918CD141E5217F8000EC0A6 /* DayTimeCalculator.swift in Sources */,
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDAEEA971D3C7C7000525126 /* UIView+Rect.swift in Sources */,
 				DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */,
