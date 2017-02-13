@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		99A347BC1E517827005C7CBE /* ExternalScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A347BB1E517827005C7CBE /* ExternalScreenManager.swift */; };
 		99B998F01E25E71200DBC4AA /* Bundle+AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998EE1E25E71200DBC4AA /* Bundle+AppIcon.swift */; };
 		99B998F11E25E71200DBC4AA /* Bundle+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998EF1E25E71200DBC4AA /* Bundle+Man.swift */; };
 		99B998F41E25E74300DBC4AA /* Data+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B998F31E25E74300DBC4AA /* Data+Man.swift */; };
@@ -100,6 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99A347BB1E517827005C7CBE /* ExternalScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalScreenManager.swift; sourceTree = "<group>"; };
 		99B998EE1E25E71200DBC4AA /* Bundle+AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+AppIcon.swift"; sourceTree = "<group>"; };
 		99B998EF1E25E71200DBC4AA /* Bundle+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Man.swift"; sourceTree = "<group>"; };
 		99B998F31E25E74300DBC4AA /* Data+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Man.swift"; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				DDED9EEF1CD9D25800E196EB /* AppInfos.swift */,
+				99A347BB1E517827005C7CBE /* ExternalScreenManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				DD66512C1CD8EC7600C81C38 /* CGRect+Man.swift in Sources */,
 				99B999411E263D5C00DBC4AA /* UIView+Animation.swift in Sources */,
 				DDED9EEB1CD9CCC000E196EB /* UIWindow+Man.swift in Sources */,
+				99A347BC1E517827005C7CBE /* ExternalScreenManager.swift in Sources */,
 				99B999081E25EE0100DBC4AA /* String+URL.swift in Sources */,
 				99B9994A1E268AC100DBC4AA /* UISlider+Man.swift in Sources */,
 				DDED9F001CDA0F1900E196EB /* Dictionary+Man.swift in Sources */,
