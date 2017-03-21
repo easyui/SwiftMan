@@ -22,4 +22,6 @@ extension UIImageView {
         self.addSubview(blurEffectView)
         self.clipsToBounds = true
     }
+    
+    
 }

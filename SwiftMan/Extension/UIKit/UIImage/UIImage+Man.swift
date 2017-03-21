@@ -83,5 +83,31 @@ public extension UIImage{
         UIGraphicsEndImageContext()
         return newImage
     }
+    
+    
+    /// 添加圆角
+    ///
+    /// - Parameters:
+    ///   - radius: 圆角
+    ///   - size: 长宽
+    /// - Returns: 添加圆角后的图片
+    func addedCorner(radius: CGFloat) -> UIImage {
+        let rect = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(size.width), height: CGFloat(size.height))
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return self
+        }
+
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
+        context.addPath(path.cgPath)
+        context.clip()
+        self.draw(in: rect)
+        context.drawPath(using: CGPathDrawingMode.stroke)
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return self
+        }
+        UIGraphicsEndImageContext()
+        return newImage
+    }
 
 }
