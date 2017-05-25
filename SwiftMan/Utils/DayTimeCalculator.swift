@@ -97,10 +97,10 @@ class DayTimeCalculator: NSObject {
 extension DayTimeCalculator{
     
     fileprivate class func angleToRadians(angle: Double) -> Double{
-        return angle * M_PI / 180
+        return angle * Double.pi / 180
     }
     
     fileprivate class func radiansToAngle(radians: Double) -> Double{
-        return radians * 180 / M_PI
+        return radians * 180 / Double.pi
     }
 }
