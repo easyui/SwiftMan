@@ -10,6 +10,14 @@ import UIKit
 
 
 public extension UIView {
+    public static func m_nib() ->  UINib {
+        return  UINib(nibName: String(describing: self), bundle: nil)
+    }
+    
+    public static func m_identifier() -> String {
+        return  self.m_className + "_m_identifier"
+    }
+    
     
     @IBInspectable
     public var m_borderColor: UIColor? {
