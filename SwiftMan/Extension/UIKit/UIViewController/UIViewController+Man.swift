@@ -72,6 +72,26 @@ public extension UIViewController {
         }
     }
     
+    // MARK: - AlertController
+    public func m_showAlertController(title: String?, message: String?,leftButtonTitle: String?, leftButtonhandler: ((UIAlertAction) -> Swift.Void)? = nil,rightButtonTitle: String?, rightButtonhandler: ((UIAlertAction) -> Swift.Void)? = nil , presentAnimated : Bool = true, presentCompletion: (() -> Swift.Void)? = nil){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let leftAction = UIAlertAction(title: leftButtonTitle, style: .default, handler: leftButtonhandler)
+        leftAction.isEnabled = true
+        alertController.addAction(leftAction)
+        let rightAction = UIAlertAction(title: rightButtonTitle, style: .default, handler: rightButtonhandler)
+        rightAction.isEnabled = true
+        alertController.addAction(rightAction)
+        self.present(alertController, animated: presentAnimated, completion: presentCompletion)
+    }
+    
+    public func m_showAlertController(title: String?, message: String? = nil ,buttonTitle: String = "确认", buttonhandler: ((UIAlertAction) -> Swift.Void)? = nil , presentAnimated : Bool = true, presentCompletion: (() -> Swift.Void)? = nil){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: buttonTitle, style: .default, handler: buttonhandler)
+        action.isEnabled = true
+        alertController.addAction(action)
+        self.present(alertController, animated: presentAnimated, completion: presentCompletion)
+    }
+    
 }
 
 
