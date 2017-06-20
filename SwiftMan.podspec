@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftMan"
-  s.version      = "0.2.2"
+  s.version      = "0.2.3"
   s.summary      = "Swift extensions and utils classes"
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "SwiftMan/*"
+  s.source_files  = "SwiftMan/**/*"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
