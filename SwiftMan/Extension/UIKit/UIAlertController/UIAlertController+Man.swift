@@ -6,6 +6,7 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#if os(iOS)
 
 import UIKit
 
@@ -54,3 +55,4 @@ public extension UIAlertController {
         }
     }
 }
+#endif
