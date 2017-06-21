@@ -10,7 +10,7 @@
 
 public extension UINavigationController {
     
-    private func doInTransaction(_ block: ()->(), completion:  (()->Void)? = nil)
+    private func m_doInTransaction(_ block: ()->(), completion:  (()->Void)? = nil)
     {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)
@@ -20,12 +20,12 @@ public extension UINavigationController {
     
     public func m_popViewController(completion: (()->Void)? = nil)
     {
-        self.doInTransaction({ popViewController(animated: true) }, completion: completion)
+        self.m_doInTransaction({ popViewController(animated: true) }, completion: completion)
     }
     
     public func m_pushViewController(viewController: UIViewController, completion: (()->Void)? = nil)
     {
-        self.doInTransaction({pushViewController(viewController, animated: true)}, completion: completion)
+        self.m_doInTransaction({pushViewController(viewController, animated: true)}, completion: completion)
     }
     
 }
