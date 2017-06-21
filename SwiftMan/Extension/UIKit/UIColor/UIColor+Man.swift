@@ -5,7 +5,7 @@
 //  Created by yangjun on 16/4/29.
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
-
+#if !os(macOS)
 import UIKit
 
 public extension UIColor {
@@ -48,6 +48,9 @@ public extension UIColor {
         self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: alpha)
     }
     
+}
+    
+public extension UIColor {    
     //  Returns random UIColor with random alpha(default: false)
     
     /// 随机颜色
@@ -88,6 +91,18 @@ public extension UIColor {
         return (red << 24) + (green << 16) + (blue << 8) + alpha;
     }
     
+    
+    /// SwifterSwift: Hexadecimal value string (read-only). ex:UIColor.red.m_RGBHexString is #FF0000
+    public var m_RGBHexString: String {
+        return NSString(format:"#%06x", m_RGBHex).uppercased as String
+    }
+    
+    
+    /// ex:UIColor.red.m_RGBAHexString is #FF0000FF
+    public var m_RGBAHexString: String{
+        return NSString(format:"#%06x", m_RGBAHex).uppercased as String
+    }
+    
     /// Red of UIColor (get-only)
     public var m_red: CGFloat {
         var red: CGFloat = 0
@@ -120,5 +135,6 @@ public extension UIColor {
     
     
 }
+#endif
 
 
