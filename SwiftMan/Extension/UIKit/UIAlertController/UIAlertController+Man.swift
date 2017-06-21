@@ -32,7 +32,9 @@ public extension UIAlertController{
         }
     }
 
+}
 
+public extension UIAlertController {
     public convenience init(title: String? = nil, message: String? = nil, defaultActionButtonTitle: String = "OK", tintColor: UIColor? = nil) {
         self.init(title: title, message: message, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: defaultActionButtonTitle, style: .default, handler: nil)
