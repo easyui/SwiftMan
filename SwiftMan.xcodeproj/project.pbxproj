@@ -57,6 +57,7 @@
 		99B999791E27684200DBC4AA /* AVPlayer+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999781E27684200DBC4AA /* AVPlayer+Man.swift */; };
 		99B9997E1E27BCBF00DBC4AA /* URLSession+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9997D1E27BCBF00DBC4AA /* URLSession+Man.swift */; };
 		99B9999F1E28C75600DBC4AA /* URLSession+SynchronousTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9999E1E28C75600DBC4AA /* URLSession+SynchronousTask.swift */; };
+		A6BF43DA1EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43D91EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift */; };
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
 		DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */; };
 		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
@@ -137,6 +138,7 @@
 		99B999781E27684200DBC4AA /* AVPlayer+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Man.swift"; sourceTree = "<group>"; };
 		99B9997D1E27BCBF00DBC4AA /* URLSession+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Man.swift"; sourceTree = "<group>"; };
 		99B9999E1E28C75600DBC4AA /* URLSession+SynchronousTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+SynchronousTask.swift"; sourceTree = "<group>"; };
+		A6BF43D91EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Man.swift"; sourceTree = "<group>"; };
 		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Man.swift"; sourceTree = "<group>"; };
 		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
@@ -395,6 +397,14 @@
 			path = URLSession;
 			sourceTree = "<group>";
 		};
+		A6BF43D51EFA9BB000EEF7CF /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				A6BF43D91EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
 		DD3F99B61D257AB30097F5D3 /* UIAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,12 +526,11 @@
 		DDA2A8AA1CD6EDAF00AAAB8C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				99B999511E26A2C400DBC4AA /* UICollectionView */,
 				DD3F99B61D257AB30097F5D3 /* UIAlertController */,
-				99B999421E263DCE00DBC4AA /* UITableView */,
-				DD605CB31D19E01900E3F2D8 /* UITableViewCell */,
 				DDA2A8AB1CD6EDAF00AAAB8C /* UIApplication */,
+				A6BF43D51EFA9BB000EEF7CF /* UIBarButtonItem */,
 				DDED9EE71CD9C60F00E196EB /* UIButton */,
+				99B999511E26A2C400DBC4AA /* UICollectionView */,
 				DDA2A8AD1CD6EDAF00AAAB8C /* UIColor */,
 				DDA2A8AF1CD6EDAF00AAAB8C /* UIDevice */,
 				DDA2A8B01CD6EDAF00AAAB8C /* UIImage */,
@@ -531,11 +540,13 @@
 				99B9991C1E25F79200DBC4AA /* UINavigationController */,
 				DDA2A8B51CD6EDAF00AAAB8C /* UIScreen */,
 				99B999231E25F84700DBC4AA /* UIScrollView */,
-				99B9993A1E263B5B00DBC4AA /* UITextView */,
-				99B999451E26892A00DBC4AA /* UITabBar */,
-				99B9993D1E263B9000DBC4AA /* UITextField */,
-				99B999481E268AA100DBC4AA /* UISlider */,
 				99B9994B1E268B6000DBC4AA /* UISearchBar */,
+				99B999481E268AA100DBC4AA /* UISlider */,
+				99B999451E26892A00DBC4AA /* UITabBar */,
+				99B999421E263DCE00DBC4AA /* UITableView */,
+				DD605CB31D19E01900E3F2D8 /* UITableViewCell */,
+				99B9993D1E263B9000DBC4AA /* UITextField */,
+				99B9993A1E263B5B00DBC4AA /* UITextView */,
 				DDA2A8B81CD6EDAF00AAAB8C /* UIView */,
 				DDA2A8B91CD6EDAF00AAAB8C /* UIViewController */,
 				DDA2A8BA1CD6EDAF00AAAB8C /* UIWindow */,
@@ -810,6 +821,7 @@
 				DDA2A8BD1CD6EDAF00AAAB8C /* UIImage+Man.swift in Sources */,
 				99B999531E26A3B100DBC4AA /* UICollectionView+Man.swift in Sources */,
 				99B999471E26893A00DBC4AA /* UITabBar+Man.swift in Sources */,
+				A6BF43DA1EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift in Sources */,
 				DDAEC86E1D3D1A320038F7EA /* UIViewController+Find.swift in Sources */,
 				99B999791E27684200DBC4AA /* AVPlayer+Man.swift in Sources */,
 				99B999301E26077800DBC4AA /* AVPlayerItem+Man.swift in Sources */,
