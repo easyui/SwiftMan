@@ -58,6 +58,7 @@
 		99B9997E1E27BCBF00DBC4AA /* URLSession+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9997D1E27BCBF00DBC4AA /* URLSession+Man.swift */; };
 		99B9999F1E28C75600DBC4AA /* URLSession+SynchronousTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9999E1E28C75600DBC4AA /* URLSession+SynchronousTask.swift */; };
 		A6BF43DA1EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43D91EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift */; };
+		A6BF43DC1EFAB1DB00EEF7CF /* UIColor+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43DB1EFAB1DB00EEF7CF /* UIColor+Constant.swift */; };
 		DD244E321CD7A286009CAB3B /* UIDevice+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */; };
 		DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */; };
 		DD605CB51D19E02F00E3F2D8 /* UITableViewCell+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */; };
@@ -139,6 +140,7 @@
 		99B9997D1E27BCBF00DBC4AA /* URLSession+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Man.swift"; sourceTree = "<group>"; };
 		99B9999E1E28C75600DBC4AA /* URLSession+SynchronousTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+SynchronousTask.swift"; sourceTree = "<group>"; };
 		A6BF43D91EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Man.swift"; sourceTree = "<group>"; };
+		A6BF43DB1EFAB1DB00EEF7CF /* UIColor+Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Constant.swift"; sourceTree = "<group>"; };
 		DD244E311CD7A286009CAB3B /* UIDevice+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Man.swift"; sourceTree = "<group>"; };
 		DD3F99B71D257ACD0097F5D3 /* UIAlertController+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Man.swift"; sourceTree = "<group>"; };
 		DD605CB41D19E02F00E3F2D8 /* UITableViewCell+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Man.swift"; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA2A8AE1CD6EDAF00AAAB8C /* UIColor+Man.swift */,
+				A6BF43DB1EFAB1DB00EEF7CF /* UIColor+Constant.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -815,6 +818,7 @@
 				99B9993C1E263B5B00DBC4AA /* UITextView+Man.swift in Sources */,
 				DDA2A8BB1CD6EDAF00AAAB8C /* UIApplication+Man.swift in Sources */,
 				99B999051E25EE0100DBC4AA /* String+Format.swift in Sources */,
+				A6BF43DC1EFAB1DB00EEF7CF /* UIColor+Constant.swift in Sources */,
 				9918CD141E5217F8000EC0A6 /* DayTimeCalculator.swift in Sources */,
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDAEEA971D3C7C7000525126 /* UIView+Rect.swift in Sources */,
