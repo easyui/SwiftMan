@@ -69,5 +69,8 @@ Then, run the following command:
 $ pod install
 ```
 
+## Thank you
+
+some functions from other gitHub and internet, thanks all.
 
 
