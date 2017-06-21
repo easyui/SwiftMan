@@ -5,6 +5,7 @@
 //  Created by yangjun on 16/4/29.
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
+#if !os(macOS)
 
 import UIKit
 
@@ -16,6 +17,17 @@ public extension UIImage{
     
     public var m_kilobytesSize: Int {
         return m_bytesSize / 1024
+    }
+    
+    public func m_compressed(quality: CGFloat = 0.5) -> UIImage? {
+        guard let data = m_compressedData(quality: quality) else {
+            return nil
+        }
+        return UIImage(data: data)
+    }
+    
+    public func m_compressedData(quality: CGFloat = 0.5) -> Data? {
+        return UIImageJPEGRepresentation(self, quality)
     }
     
     public static func m_image(color: UIColor , size: CGSize = CGSize(width: 1, height: 1)) -> UIImage
@@ -111,3 +123,4 @@ public extension UIImage{
     }
 
 }
+#endif
