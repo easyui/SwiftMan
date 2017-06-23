@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftMan"
-  s.version      = "0.2.3"
+  s.version      = "0.2.4"
   s.summary      = "Swift extensions and utils classes"
 
   # This description is used to generate tags and improve search results.
