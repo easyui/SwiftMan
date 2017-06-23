@@ -6,7 +6,8 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-import Foundation
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension UITabBar {
     
@@ -53,3 +54,4 @@ public extension UITabBar {
         }
     }
 }
+#endif

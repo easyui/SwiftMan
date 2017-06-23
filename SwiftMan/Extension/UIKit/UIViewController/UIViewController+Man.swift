@@ -5,6 +5,7 @@
 //  Created by yangjun on 16/7/18.
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
+#if os(iOS) || os(tvOS)
 
 import UIKit
 
@@ -94,4 +95,5 @@ public extension UIViewController {
     
 }
 
+#endif
 

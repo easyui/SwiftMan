@@ -2,7 +2,7 @@
 //  UIColor+Constant.swift
 //  SwiftMan
 //
-//  Created by IQIYI on 2017/6/21.
+//  Created by yangjun on 2017/6/21.
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 

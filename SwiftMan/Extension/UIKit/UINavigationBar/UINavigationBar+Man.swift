@@ -6,7 +6,9 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-
+#if os(iOS) || os(tvOS)
+import UIKit
+    
 public extension UINavigationBar {
     
     public func m_setTitleFont(_ font: UIFont, color: UIColor = UIColor.black) {
@@ -34,3 +36,4 @@ public extension UINavigationBar {
         self.titleTextAttributes = [NSForegroundColorAttributeName: text]
     }
 }
+#endif

@@ -6,7 +6,8 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-import Foundation
+#if os(iOS)
+import UIKit
 
 
 public extension UISlider {
@@ -31,3 +32,4 @@ public extension UISlider {
         }
     }
 }
+#endif

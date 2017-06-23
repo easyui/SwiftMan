@@ -7,7 +7,9 @@
 //
 
 
-
+#if os(iOS) || os(tvOS)
+import UIKit
+    
 public extension UINavigationController {
     
     private func m_doInTransaction(_ block: ()->(), completion:  (()->Void)? = nil)
@@ -29,3 +31,4 @@ public extension UINavigationController {
     }
     
 }
+#endif

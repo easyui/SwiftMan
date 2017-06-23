@@ -6,7 +6,8 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-import Foundation
+#if os(iOS) || os(tvOS)
+import UIKit
 
 
 public extension UISearchBar {
@@ -23,3 +24,4 @@ public extension UISearchBar {
 
     
 }
+#endif
