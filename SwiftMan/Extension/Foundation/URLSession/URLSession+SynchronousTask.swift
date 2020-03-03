@@ -9,7 +9,7 @@
 import Foundation
 
 
-public extension URLSession{
+extension URLSession{
     
     // MARK: - send data
 

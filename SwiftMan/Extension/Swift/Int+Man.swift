@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Int {
+extension Int {
     public var m_isEven:Bool     {return (self % 2 == 0)}
     public var m_isOdd:Bool      {return (self % 2 != 0)}
     

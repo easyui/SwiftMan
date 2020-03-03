@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public extension NotificationCenter{
+extension NotificationCenter{
     
 
     

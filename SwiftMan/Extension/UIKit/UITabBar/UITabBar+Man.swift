@@ -9,7 +9,7 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-public extension UITabBar {
+extension UITabBar {
     
     /// Set tabBar colors.
     ///
@@ -45,9 +45,9 @@ public extension UITabBar {
                 // item
                 if let image = barItem.image {
                     barItem.image = image.m_filled(withColor: itemColor).withRenderingMode(.alwaysOriginal)
-                    barItem.setTitleTextAttributes([NSForegroundColorAttributeName : itemColor], for: .normal)
+                    barItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : itemColor], for: .normal)
                     if let selected = selectedItem {
-                        barItem.setTitleTextAttributes([NSForegroundColorAttributeName : selected], for: .selected)
+                        barItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : selected], for: .selected)
                     }
                 }
             }

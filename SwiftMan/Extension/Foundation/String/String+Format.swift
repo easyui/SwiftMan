@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension String {
+extension String {
     /*
      - (NSString *)  ez_dateStringToDateStringWithDateFormat:(NSString *)formatString
      timezone                            :(NSString *)timezoneAbbr

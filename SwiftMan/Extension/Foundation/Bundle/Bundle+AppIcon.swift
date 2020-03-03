@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public extension Bundle {
+extension Bundle {
     
     /// 获取多个app icon名字数组
     ///

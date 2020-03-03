@@ -15,14 +15,14 @@
 
 
 // MARK: - Properties
-public extension Data {
+extension Data {
     
     /// SwiftMan: NSAttributedString from Data (if applicable).
     public var m_attributedString: NSAttributedString? {
         // http://stackoverflow.com/questions/39248092/nsattributedstring-extension-in-swift-3
         return try? NSAttributedString(data: self, options: [
-            NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
-            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue], documentAttributes: nil)
+            NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,
+            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
     }
     
     /// SwiftMan: Return data as an array of bytes.
@@ -33,7 +33,7 @@ public extension Data {
 }
 
 // MARK: - Methods
-public extension Data {
+extension Data {
     
     /// SwifterSwift: String by encoding Data using the given encoding (if applicable).
     ///

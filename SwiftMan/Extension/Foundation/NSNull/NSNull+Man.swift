@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public extension NSNull{
+extension NSNull{
     
  
     

@@ -10,7 +10,7 @@
 import UIKit
 
 
-public extension UIViewController{
+extension UIViewController{
     fileprivate struct AssociatedKeys {
         static var SwitchEffectKey = "SwitchEffectKey"
         static var LeftActionBlockKey = "LeftActionBlockKey"
@@ -45,27 +45,27 @@ public extension UIViewController{
         barButton.addTarget(self, action: (position == .NavigationBarButtonAsLeft) ? #selector(UIViewController.leftBarButtonAction(_:)) : #selector(UIViewController.rightBarButtonAction(_:)), for: .touchUpInside)
         barButton.imageView?.contentMode = .scaleAspectFit
         if let image = normalImage{
-            barButton.setImage(image, for: UIControlState())
+            barButton.setImage(image, for: .normal)
         }
         if let image = highlightedImage{
             barButton.setImage(image, for: .highlighted)
         }
         
         if let image = normalBgImage{
-            barButton.setBackgroundImage(image, for: UIControlState())
+            barButton.setBackgroundImage(image, for: .normal)
         }
         if let image = highlightedBgImage{
             barButton.setBackgroundImage(image, for: .highlighted)
         }
         
         if let titleTemp = title{
-            barButton.setTitle(titleTemp, for: UIControlState())
+            barButton.setTitle(titleTemp, for: .normal)
         }
         if let font = titleFont{
             barButton.titleLabel?.font = font
         }
         if let color = normalColor{
-            barButton.setTitleColor(color, for: UIControlState())
+            barButton.setTitleColor(color, for: .normal)
         }
         if let color = highlightedColor{
             barButton.setTitleColor(color, for: .highlighted)
@@ -89,8 +89,8 @@ public extension UIViewController{
         }else{
             self.navigationItem.rightBarButtonItem = barButtonItem;
         }
-        barButton.imageEdgeInsets = UIEdgeInsetsMake(0, position == .NavigationBarButtonAsLeft ? -(24+offset):0, 0, position == .NavigationBarButtonAsLeft ? 0:-(24+offset));
-        barButton.titleEdgeInsets = UIEdgeInsetsMake(0, position == .NavigationBarButtonAsLeft ? -(24+offset):0, 0, position == .NavigationBarButtonAsLeft ? 0:-(24+offset));
+        barButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: position == .NavigationBarButtonAsLeft ? -(24+offset):0, bottom: 0, right: position == .NavigationBarButtonAsLeft ? 0:-(24+offset));
+        barButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: position == .NavigationBarButtonAsLeft ? -(24+offset):0, bottom: 0, right: position == .NavigationBarButtonAsLeft ? 0:-(24+offset));
         if let blockTemp = setButtonBlock {
             blockTemp(barButton);
         }

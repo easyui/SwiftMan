@@ -10,7 +10,7 @@
 import UIKit
 
     //MARK: - Social Colors
-    public extension UIColor {
+    extension UIColor {
         
         /// SwifterSwift: Brand identity color of popular social media platform.
         public struct m_social {
@@ -99,7 +99,7 @@ import UIKit
     
     
     //MARK: - Material colors
-    public extension UIColor {
+    extension UIColor {
         
         /// SwifterSwift: Google Material design colors palette.
         public struct m_material {
@@ -404,7 +404,7 @@ import UIKit
     }
     
     
-    public extension UIColor {
+    extension UIColor {
         
         /// SwifterSwift: CSS colors.
         public struct m_css {

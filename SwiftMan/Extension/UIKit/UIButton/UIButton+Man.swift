@@ -9,34 +9,34 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-public extension UIButton{
+extension UIButton{
     
     public convenience init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, target: AnyObject, action: Selector) {
-        self.init(frame:CGRect(x: x, y: y, width: width, height: height), target:target,action:action,controlEvents:UIControlEvents.touchUpInside)
+        self.init(frame:CGRect(x: x, y: y, width: width, height: height), target:target,action:action,controlEvents:UIControl.Event.touchUpInside)
     }
     
     
-    public convenience init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, target: AnyObject, action: Selector, controlEvents: UIControlEvents) {
+    public convenience init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, target: AnyObject, action: Selector, controlEvents: UIControl.Event) {
         self.init(frame:CGRect(x: x, y: y, width: width, height: height), target:target,action:action,controlEvents:controlEvents)
     }
     
     public convenience init(frame: CGRect, target: AnyObject, action: Selector) {
-        self.init(frame:frame, target:target,action:action,controlEvents:UIControlEvents.touchUpInside)
+        self.init(frame:frame, target:target,action:action,controlEvents:UIControl.Event.touchUpInside)
     }
     
-    public convenience init(frame: CGRect, target: AnyObject, action: Selector, controlEvents: UIControlEvents) {
+    public convenience init(frame: CGRect, target: AnyObject, action: Selector, controlEvents: UIControl.Event) {
         self.init(frame: frame)
         addTarget(target, action: action, for: controlEvents)
     }
 }
 
-public extension UIButton{
+extension UIButton{
     /// 设置按钮背景颜色
     ///
     /// - Parameters:
     ///   - color: 背景颜色
     ///   - forState: 按钮状态
-    public func m_setBackgroundColor(_ color: UIColor, for state: UIControlState) {
+    public func m_setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()?.setFillColor(color.cgColor)
         UIGraphicsGetCurrentContext()?.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
@@ -46,7 +46,7 @@ public extension UIButton{
         
     }
     
-    private var m_states: [UIControlState] {
+    private var m_states: [UIControl.State] {
         return [.normal, .selected, .highlighted, .disabled]
     }
     

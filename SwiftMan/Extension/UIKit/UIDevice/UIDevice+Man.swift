@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIDevice {
+extension UIDevice {
     // Returns true if the device is iPhone
     public static var  n_isPhone: Bool {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone

@@ -14,7 +14,7 @@
 
 
 // MARK: - Properties
-public extension CGFloat {
+extension CGFloat {
     
     /// SwiftMan: Absolute of CGFloat value.
     public var m_abs: CGFloat {
@@ -60,7 +60,7 @@ public extension CGFloat {
 
 
 // MARK: - Methods
-public extension CGFloat {
+extension CGFloat {
     
     /// SwiftMan: Random CGFloat between two CGFloat values.
     ///

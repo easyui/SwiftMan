@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Timer {
+extension Timer {
     
     public func m_pauseTimer(){
         guard self.isValid  else{

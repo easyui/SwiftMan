@@ -10,7 +10,7 @@
 import UIKit
 
 
-public extension UISlider {
+extension UISlider {
     
     ///  Set slide bar value with completion handler.
     ///

@@ -7,7 +7,7 @@
 //
 
 import AVFoundation
-public extension AVPlayerItem {
+extension AVPlayerItem {
 
     public var m_bufferDuration: TimeInterval? {
         if  let first = self.loadedTimeRanges.first {
@@ -24,13 +24,13 @@ public extension AVPlayerItem {
     /// 获取／设置当前subtitle／cc
     public var m_selectedMediaCharacteristicLegibleOption:AVMediaSelectionOption?{
         get{
-            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible){
+            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.legible){
                 return self.selectedMediaOption(in: legibleGroup)
             }
             return nil
         }
         set{
-            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible){
+            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.legible){
                 self.select(newValue, in: legibleGroup)
             }
         }
@@ -40,17 +40,17 @@ public extension AVPlayerItem {
     public var m_selectedClosedCaptionOption:AVMediaSelectionOption?{
         get{
             if let option = self.m_selectedMediaCharacteristicLegibleOption{
-                if option.mediaType == "clcp" {
+                if option.mediaType.rawValue == "clcp" {
                     return option
                 }
             }
             return nil
         }
         set{
-            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible){
+            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.legible){
                 if newValue == nil{
                     self.select(newValue, in: legibleGroup)
-                }else if newValue!.mediaType == "clcp"{
+                }else if newValue!.mediaType.rawValue == "clcp"{
                     self.select(newValue, in: legibleGroup)
                 }
             }
@@ -61,17 +61,17 @@ public extension AVPlayerItem {
     public var m_selectedSubtitleOption:AVMediaSelectionOption?{
         get{
             if let option = self.m_selectedMediaCharacteristicLegibleOption{
-                if !option.hasMediaCharacteristic(AVMediaCharacteristicContainsOnlyForcedSubtitles) {
+                if !option.hasMediaCharacteristic(AVMediaCharacteristic.containsOnlyForcedSubtitles) {
                     return option
                 }
             }
             return nil
         }
         set{
-            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible){
+            if let legibleGroup = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.legible){
                 if newValue == nil{
                     self.select(newValue, in: legibleGroup)
-                }else if !newValue!.hasMediaCharacteristic(AVMediaCharacteristicContainsOnlyForcedSubtitles) {
+                }else if !newValue!.hasMediaCharacteristic(AVMediaCharacteristic.containsOnlyForcedSubtitles) {
                     self.select(newValue, in: legibleGroup)
                 }
             }
@@ -81,13 +81,13 @@ public extension AVPlayerItem {
     /// 获取／设置当前audio
     public var m_selectedMediaCharacteristicAudibleOption:AVMediaSelectionOption?{
         get{
-            if let group = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible){
+            if let group = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.audible){
                 return self.selectedMediaOption(in: group)
             }
             return nil
         }
         set{
-            if let group = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible){
+            if let group = self.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.audible){
                 self.select(newValue, in: group)
             }
         }

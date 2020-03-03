@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension URLSession{
+extension URLSession{
     
     
     

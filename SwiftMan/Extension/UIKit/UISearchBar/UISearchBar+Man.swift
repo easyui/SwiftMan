@@ -10,7 +10,7 @@
 import UIKit
 
 
-public extension UISearchBar {
+extension UISearchBar {
     
     ///  Text field inside search bar (if applicable).
     public var m_textField: UITextField? {

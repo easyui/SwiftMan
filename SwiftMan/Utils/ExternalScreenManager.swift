@@ -15,7 +15,7 @@ public enum ExternalScreenStatus{
 }
 
 
-public extension Notification.Name {
+extension Notification.Name {
     static let ExternalScreenDidConnected = Notification.Name(rawValue: "com.swiftMan.ExternalScreenDidConnected")
     static let ExternalScreenDidDisconnected = Notification.Name(rawValue: "com.swiftMan.ExternalScreenDidDisconnected")
     static let ExternalViewControllerDidUpdated = Notification.Name(rawValue: "com.swiftMan.ExternalViewControllerDidUpdated")
@@ -87,8 +87,8 @@ extension ExternalScreenManager {
             return false
         }
         self.externalViewController = externalViewController
-        self.externalWindow?.rootViewController?.removeFromParentViewController()
-        self.externalWindow?.rootViewController?.navigationController?.removeFromParentViewController()
+        self.externalWindow?.rootViewController?.removeFromParent()
+        self.externalWindow?.rootViewController?.navigationController?.removeFromParent()
         self.externalWindow?.rootViewController = nil
         self.externalWindow?.rootViewController = self.externalViewController
         self.externalViewController?.view.frame = (self.externalWindow?.bounds)!
@@ -112,13 +112,13 @@ extension ExternalScreenManager {
     
     public func beginObserveExternalScreen() {
         connectExternalScreen()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.externalScreenDidConnect(_:)), name: NSNotification.Name.UIScreenDidConnect, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.externalScreenDidDisconnect(_:)), name: NSNotification.Name.UIScreenDidDisconnect, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.externalScreenDidConnect(_:)), name: UIScreen.didConnectNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.externalScreenDidDisconnect(_:)), name: UIScreen.didDisconnectNotification, object: nil)
     }
     
     public func stopObserveExternalScreen() {
-        NotificationCenter.default.removeObserver(self, name:  NSNotification.Name.UIScreenDidConnect, object: nil)
-        NotificationCenter.default.removeObserver(self, name:  NSNotification.Name.UIScreenDidDisconnect, object: nil)
+        NotificationCenter.default.removeObserver(self, name:  UIScreen.didConnectNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name:  UIScreen.didDisconnectNotification, object: nil)
     }
     
     

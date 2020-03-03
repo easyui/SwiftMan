@@ -15,7 +15,7 @@
 
 
 // MARK: - Methods
-public extension CGPoint {
+extension CGPoint {
     
     /// SwiftMan: Distance from another CGPoint.
     ///

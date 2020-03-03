@@ -9,10 +9,10 @@
 
 import UIKit
 
-public extension UIImage{
+extension UIImage{
 
     public var m_bytesSize: Int {
-        return UIImageJPEGRepresentation(self, 1)?.count ?? 0
+        return self.jpegData(compressionQuality: 1)?.count ?? 0
     }
     
     public var m_kilobytesSize: Int {
@@ -27,7 +27,7 @@ public extension UIImage{
     }
     
     public func m_compressedData(quality: CGFloat = 0.5) -> Data? {
-        return UIImageJPEGRepresentation(self, quality)
+        return self.jpegData(compressionQuality: quality)
     }
     
     public static func m_image(color: UIColor , size: CGSize = CGSize(width: 1, height: 1)) -> UIImage

@@ -13,7 +13,7 @@ import UIKit
 
 
 // MARK: - Methods
-public extension UILabel {
+extension UILabel {
     
     /// SwiftMan: Required height for a label
     public var m_requiredHeight: CGFloat {

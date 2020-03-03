@@ -11,7 +11,7 @@
     import UIKit
     
     // MARK: - Methods
-    public extension UIStoryboard {
+    extension UIStoryboard {
         
         /// SwiftMan: Get main storyboard for application
         public static var mainStoryboard: UIStoryboard? {

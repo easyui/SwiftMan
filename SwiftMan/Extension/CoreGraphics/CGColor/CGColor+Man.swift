@@ -13,7 +13,7 @@
 #endif
 
 
-public extension CGColor {
+extension CGColor {
     
     #if !os(macOS)
     /// SwiftMan: UIColor.

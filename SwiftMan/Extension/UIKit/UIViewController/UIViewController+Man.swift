@@ -9,20 +9,20 @@
 
 import UIKit
 
-public extension UIViewController {
+extension UIViewController {
     
     // MARK: - add / remove
     public func m_displayController(_ controller: UIViewController, frame: CGRect) {
-        self.addChildViewController(controller)
+        self.addChild(controller)
         controller.view.frame = frame
         self.view!.addSubview(controller.view)
-        controller.didMove(toParentViewController: self)
+        controller.didMove(toParent: self)
     }
     
     public func m_hideController(_ controller: UIViewController) {
-        controller.willMove(toParentViewController: nil)
+        controller.willMove(toParent: nil)
         controller.view.removeFromSuperview()
-        controller.removeFromParentViewController()
+        controller.removeFromParent()
     }
     
 

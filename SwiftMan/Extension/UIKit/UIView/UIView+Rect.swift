@@ -9,7 +9,7 @@
 import UIKit
 
 
-public extension UIView {
+extension UIView {
     
     // MARK: -  Frame get/set shorthand
     
@@ -125,7 +125,7 @@ public extension UIView {
         if ((NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1)) {
             return  self.frame.width
         }else{
-            return UIDeviceOrientationIsLandscape(UIDevice.current.orientation) ? self.frame.height : self.frame.width
+            return UIDevice.current.orientation.isLandscape ? self.frame.height : self.frame.width
         }
     }
     
@@ -133,7 +133,7 @@ public extension UIView {
         if ((NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1)) {
             return  self.frame.height;
         }else{
-            return UIDeviceOrientationIsLandscape(UIDevice.current.orientation) ? self.frame.width : self.frame.height;
+            return UIDevice.current.orientation.isLandscape ? self.frame.width : self.frame.height;
         }
     }
     

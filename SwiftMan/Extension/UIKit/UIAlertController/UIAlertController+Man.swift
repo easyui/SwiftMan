@@ -11,12 +11,12 @@
 import UIKit
 
 
-public extension UIAlertController{
+extension UIAlertController{
     public func m_show(animated: Bool = true, completion: (() -> Void)? = nil) {
         UIApplication.shared.keyWindow?.rootViewController?.present(self, animated: animated, completion: completion)
     }
     
-    @discardableResult public func m_addAction(title: String, style: UIAlertActionStyle = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+    @discardableResult public func m_addAction(title: String, style: UIAlertAction.Style = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
         let action = UIAlertAction(title: title, style: style, handler: handler)
         action.isEnabled = isEnabled
         self.addAction(action)
@@ -35,7 +35,7 @@ public extension UIAlertController{
 
 }
 
-public extension UIAlertController {
+extension UIAlertController {
     public convenience init(title: String? = nil, message: String? = nil, defaultActionButtonTitle: String = "OK", tintColor: UIColor? = nil) {
         self.init(title: title, message: message, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: defaultActionButtonTitle, style: .default, handler: nil)

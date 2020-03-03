@@ -6,8 +6,10 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#if canImport(Foundation)
 import Foundation
-public extension Bool {
+
+extension Bool {
     
     @discardableResult public mutating func m_toggle() -> Bool {
         self = !self
@@ -17,7 +19,7 @@ public extension Bool {
 
 
 // MARK: - Properties
-public extension Bool {
+extension Bool {
     
     /// SwiftMan: Return 1 if true, or 0 if false.
     public var m_Int: Int {
@@ -35,3 +37,5 @@ public extension Bool {
     }
     
 }
+
+#endif

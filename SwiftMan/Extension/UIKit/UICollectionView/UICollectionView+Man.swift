@@ -9,7 +9,7 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-    public extension UICollectionView {
+    extension UICollectionView {
     
     public func m_reloadData(_ completion:  (()->Void)? = nil) {
         UIView.animate(withDuration: 0, animations: {
@@ -21,7 +21,7 @@ import UIKit
 }
 
 
-public extension UICollectionView {
+extension UICollectionView {
     
    	public func m_indexPathForLastItem(inSection section: Int) -> IndexPath? {
         guard section >= 0 else {

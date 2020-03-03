@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Array {
+extension Array {
     
     /// 转JSON
     ///

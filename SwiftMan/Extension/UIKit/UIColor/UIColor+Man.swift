@@ -8,7 +8,7 @@
 #if !os(macOS)
 import UIKit
 
-public extension UIColor {
+extension UIColor {
     
     /// init
     ///
@@ -50,7 +50,7 @@ public extension UIColor {
     
 }
     
-public extension UIColor {    
+extension UIColor {    
     //  Returns random UIColor with random alpha(default: false)
     
     /// 随机颜色

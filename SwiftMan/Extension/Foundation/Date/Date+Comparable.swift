@@ -10,7 +10,7 @@ extension NSDate: Comparable {}
 
 //  Returns if dates are equal to each other
 public func == (lhs: NSDate, rhs: NSDate) -> Bool {
-    return (lhs == rhs)
+    return lhs.compare(rhs as Date) == .orderedSame
 }
 //  Returns if one date is smaller than the other
 public func < (lhs: NSDate, rhs: NSDate) -> Bool {

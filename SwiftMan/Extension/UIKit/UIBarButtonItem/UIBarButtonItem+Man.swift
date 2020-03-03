@@ -11,7 +11,7 @@ import UIKit
 
 
 // MARK: - Methods
-public extension UIBarButtonItem {
+extension UIBarButtonItem {
     
     /// SwiftMan: Add Target to UIBarButtonItem
     ///

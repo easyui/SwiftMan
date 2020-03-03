@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public extension Bundle {
+extension Bundle {
     
     /// 返回main中bundle
     ///

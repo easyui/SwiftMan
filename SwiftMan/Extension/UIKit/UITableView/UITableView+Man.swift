@@ -10,7 +10,7 @@
 import UIKit
 
 
-public extension UITableView{
+extension UITableView{
     public func m_indexPathForLastRow(inSection section: Int) -> IndexPath? {
         guard section >= 0 else {
             return nil

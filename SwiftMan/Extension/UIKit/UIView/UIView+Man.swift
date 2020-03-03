@@ -9,7 +9,7 @@
 import UIKit
 
 
-public extension UIView {
+extension UIView {
     public static func m_nib() ->  UINib {
         return  UINib(nibName: String(describing: self), bundle: nil)
     }

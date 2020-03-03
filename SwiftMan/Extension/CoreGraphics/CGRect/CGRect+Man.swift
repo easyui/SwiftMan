@@ -11,7 +11,7 @@ import Foundation
 
 import UIKit
 
-public extension CGRect {
+extension CGRect {
     
     /// X value of CGRect's origin
     public var m_x: CGFloat {

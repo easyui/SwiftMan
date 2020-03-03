@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension URL {
+extension URL {
     
     
     public var m_queryParameters: [String: String?]? {

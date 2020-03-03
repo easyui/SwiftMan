@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension String {
+extension String {
     
     public var m_base64Decoded: String? {
         // https://github.com/Reza-Rg/Base64-Swift-Extension/blob/master/Base64.swift
@@ -53,7 +53,7 @@ public extension String {
     }
     
     public func m_reversed() -> String {
-        return String(self.characters.reversed())
+        return String(self.reversed())
     }
     
 

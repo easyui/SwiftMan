@@ -8,21 +8,21 @@
 
 import Foundation
 
-public extension Timer {
+extension Timer {
     
-    public class func m_scheduledTimer(timeInterval: TimeInterval, block: ()->(),  repeats: Bool) -> Timer{
+    public class func m_scheduledTimer(timeInterval: TimeInterval, block: @escaping ()->(),  repeats: Bool) -> Timer{
         return self.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(Timer.executeBlockWithTimer(_:)), userInfo: block, repeats: repeats)
 
     }
     
-    public class func m_timer(timeInterval: TimeInterval, block: ()->(),  repeats: Bool) -> Timer{
+    public class func m_timer(timeInterval: TimeInterval, block: @escaping ()->(),  repeats: Bool) -> Timer{
         return Timer(timeInterval: timeInterval, target: self, selector: #selector(Timer.executeBlockWithTimer(_:)), userInfo: block, repeats: repeats)
 
     }
     
-    public class func m_timerOnCurrentCommonModes(timeInterval: TimeInterval, block: ()->(),  repeats: Bool) -> Timer{
+    public class func m_timerOnCurrentCommonModes(timeInterval: TimeInterval, block: @escaping ()->(),  repeats: Bool) -> Timer{
         let timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(Timer.executeBlockWithTimer(_:)), userInfo: block, repeats: repeats)
-        RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
+        RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
         return timer
     }
     

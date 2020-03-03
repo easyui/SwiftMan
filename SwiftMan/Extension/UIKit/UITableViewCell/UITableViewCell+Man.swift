@@ -9,6 +9,6 @@
 import UIKit
 
 
-public extension UITableViewCell{
+extension UITableViewCell{
 
 }

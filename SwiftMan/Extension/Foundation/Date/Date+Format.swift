@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Date {
+extension Date {
     
     /// 格式化时间
     ///

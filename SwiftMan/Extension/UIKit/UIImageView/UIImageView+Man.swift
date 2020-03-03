@@ -14,7 +14,7 @@ extension UIImageView {
     ///  Make image view blurry
     ///
     /// - Parameter withStyle: UIBlurEffectStyle (default is .light).
-    func m_blur(withStyle: UIBlurEffectStyle = .light) {
+    func m_blur(withStyle: UIBlurEffect.Style = .light) {
         let blurEffect = UIBlurEffect(style: withStyle)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.bounds
