@@ -179,6 +179,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -384,7 +385,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "31668c18-3b12-4845-b51c-88e8f2c2dd79";
 				PROVISIONING_PROFILE_SPECIFIER = FreeForAll_dev;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -405,7 +406,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "31668c18-3b12-4845-b51c-88e8f2c2dd79";
 				PROVISIONING_PROFILE_SPECIFIER = FreeForAll_dev;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
