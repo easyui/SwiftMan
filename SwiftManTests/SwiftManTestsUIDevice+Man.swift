@@ -13,11 +13,11 @@ class SwiftManTestsUIDevice_Man: XCTestCase {
     func testPrintSomeAttributes() {
    
         print("start--------")
-        print(UIDevice.m_systemName)
-        print(UIDevice.m_systemVersion)
-        print(UIDevice.m_systemFloatVersion)
-        print(UIDevice.m_deviceName)
-        print(UIDevice.m_deviceLanguage)
+//        print(UIDevice.m_systemName)
+//        print(UIDevice.m_systemVersion)
+//        print(UIDevice.m_systemFloatVersion)
+//        print(UIDevice.m_deviceName)
+//        print(UIDevice.m_deviceLanguage)
         print("end--------")
         
         
