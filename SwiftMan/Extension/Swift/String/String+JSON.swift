@@ -11,13 +11,13 @@ import Foundation
 
 extension String {
     //
-    public func m_JSONObject() -> Any? {
-        guard let data = self.data(using: String.Encoding.utf8) else{
+    public func m_JSONObject(using: String.Encoding = .utf8, options: JSONSerialization.ReadingOptions =  [.mutableContainers,.mutableLeaves]) -> Any? {
+        guard let data = self.data(using: using) else{
             return nil
         }
         
         do {
-            let object = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers,.mutableLeaves])
+            let object = try JSONSerialization.jsonObject(with: data, options: options)
             return object
         } catch let aError as NSError {
             print(aError)

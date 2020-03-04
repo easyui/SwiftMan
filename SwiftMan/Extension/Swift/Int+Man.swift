@@ -6,7 +6,6 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-import Foundation
 
 extension Int {
     public var m_isEven:Bool     {return (self % 2 == 0)}

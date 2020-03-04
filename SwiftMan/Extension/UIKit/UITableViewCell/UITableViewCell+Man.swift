@@ -6,9 +6,10 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
-
 
 extension UITableViewCell{
 
 }
+#endif

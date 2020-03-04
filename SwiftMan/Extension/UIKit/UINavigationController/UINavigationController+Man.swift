@@ -7,7 +7,7 @@
 //
 
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
     
 extension UINavigationController {

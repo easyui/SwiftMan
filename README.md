@@ -1,6 +1,6 @@
 # SwiftMan
 
-![Swift 3.0](https://img.shields.io/badge/Swift-3.0-brightgreen.svg?style=flat) 
+![Swift 5.0](https://img.shields.io/badge/Swift-5.0-brightgreen.svg?style=flat) 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 <a href="https://img.shields.io/cocoapods/v/ZFPlayer.svg"><img src="https://img.shields.io/cocoapods/v/SwiftMan.svg"></a>
 [![Platform](https://img.shields.io/cocoapods/p/EZPlayer.svg?style=flat)](http://cocoadocs.org/docsets/EZPlayer)

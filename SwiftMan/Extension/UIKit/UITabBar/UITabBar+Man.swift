@@ -6,7 +6,7 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UITabBar {
@@ -44,7 +44,7 @@ extension UITabBar {
             for barItem in self.items! as [UITabBarItem] {
                 // item
                 if let image = barItem.image {
-                    barItem.image = image.m_filled(withColor: itemColor).withRenderingMode(.alwaysOriginal)
+                    barItem.image = (image.m_filled(withColor: itemColor) ?? image).withRenderingMode(.alwaysOriginal)
                     barItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : itemColor], for: .normal)
                     if let selected = selectedItem {
                         barItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : selected], for: .selected)

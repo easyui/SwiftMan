@@ -6,14 +6,17 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-#if os(iOS)
-
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
-
 
 extension UIAlertController{
     public func m_show(animated: Bool = true, completion: (() -> Void)? = nil) {
-        UIApplication.shared.keyWindow?.rootViewController?.present(self, animated: animated, completion: completion)
+        #if targetEnvironment(macCatalyst)
+        let window = UIApplication.shared.windows.last
+        #else
+        let window = UIApplication.shared.keyWindow
+        #endif
+        window?.rootViewController?.present(self, animated: animated, completion: completion)
     }
     
     @discardableResult public func m_addAction(title: String, style: UIAlertAction.Style = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
@@ -24,7 +27,7 @@ extension UIAlertController{
     }
     
     public func m_addTextField(text: String? = nil, placeholder: String? = nil, editingChangedTarget: Any?, editingChangedSelector: Selector?) {
-        addTextField { tf in
+        self.addTextField { tf in
             tf.text = text
             tf.placeholder = placeholder
             if let target = editingChangedTarget, let selector = editingChangedSelector {

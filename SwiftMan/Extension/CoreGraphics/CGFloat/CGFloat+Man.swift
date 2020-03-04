@@ -6,12 +6,12 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-#if os(macOS)
-    import Cocoa
-#else
-    import UIKit
-#endif
+#if canImport(CoreGraphics)
+import CoreGraphics
 
+#if canImport(Foundation)
+import Foundation
+#endif
 
 // MARK: - Properties
 extension CGFloat {
@@ -21,6 +21,7 @@ extension CGFloat {
         return Swift.abs(self)
     }
     
+    #if canImport(Foundation)
     /// SwiftMan: Ceil of CGFloat value.
     public var m_ceil: CGFloat {
         return Foundation.ceil(self)
@@ -30,6 +31,8 @@ extension CGFloat {
     public var m_floor: CGFloat {
         return Foundation.floor(self)
     }
+    #endif
+
     
     /// SwiftMan: Degree value of radian input.
     public var m_radiansToDegrees: CGFloat {
@@ -74,3 +77,4 @@ extension CGFloat {
     }
     
 }
+#endif

@@ -6,7 +6,16 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#import "TargetConditionals.h"
+
+
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#elif TARGET_OS_MAC
+#import <Cocoa/Cocoa.h>
+#elif TARGET_OS_WATCH
+#import <WatchKit/WatchKit.h>
+#endif
 
 //! Project version number for SwiftMan.
 FOUNDATION_EXPORT double SwiftManVersionNumber;

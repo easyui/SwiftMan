@@ -6,8 +6,8 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#if canImport(UIKit) && os(iOS)
 import UIKit
-
 
 extension UIView {
     public static func m_nib() ->  UINib {
@@ -46,6 +46,32 @@ extension UIView {
         }
     }
     
+    @IBInspectable
+    public var m_cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.masksToBounds = true
+            layer.cornerRadius = newValue
+        }
+    }
+    
+    
+    /// SwifterMan: Add shadow to view.
+    ///
+    /// - Parameters:
+    ///   - color: shadow color (default is #137992).
+    ///   - radius: shadow radius (default is 3).
+    ///   - offset: shadow offset (default is .zero).
+    ///   - opacity: shadow opacity (default is 0.5).
+    public func m_addShadow(ofColor color: UIColor = UIColor(red: 0.07, green: 0.47, blue: 0.57, alpha: 1.0), radius: CGFloat = 3, offset: CGSize = .zero, opacity: Float = 0.5) {
+        layer.shadowColor = color.cgColor
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+        layer.masksToBounds = false
+    }
     
     /// load view from xib
     ///
@@ -62,24 +88,27 @@ extension UIView {
     /// - Returns: 截图
     public func m_snapshotImage() -> UIImage?{
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
-        if (self.responds(to: #selector(UIView.drawHierarchy(in:afterScreenUpdates:)))){
-            self.drawHierarchy(in: bounds, afterScreenUpdates: false)
-        }else{
-            self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        defer {
+            UIGraphicsEndImageContext()
         }
+//        if (self.responds(to: #selector(UIView.drawHierarchy(in:afterScreenUpdates:)))){
+//            self.drawHierarchy(in: bounds, afterScreenUpdates: false)
+//        }else{
+              guard let context = UIGraphicsGetCurrentContext() else { return nil }
+            self.layer.render(in: context)
+//        }
         let snapshotImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
         return snapshotImage
     }
     
     
     /// 删除subView
-    public func removeSubviews() {
+    public func m_removeSubviews() {
         self.subviews.forEach({$0.removeFromSuperview()})
     }
     
     /// 删除手势
-    public func removeGestureRecognizers() {
+    public func m_removeGestureRecognizers() {
         gestureRecognizers?.forEach(removeGestureRecognizer)
     }
     
@@ -132,3 +161,5 @@ extension UIView {
 
     
 }
+
+#endif

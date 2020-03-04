@@ -7,11 +7,8 @@
 //
 
 
-#if os(macOS)
-    import Cocoa
-#else
-    import UIKit
-#endif
+#if canImport(CoreGraphics)
+import CoreGraphics
 
 
 // MARK: - Methods
@@ -37,3 +34,5 @@ extension CGPoint {
     }
     
 }
+
+#endif

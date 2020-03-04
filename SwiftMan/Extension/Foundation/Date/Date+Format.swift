@@ -6,8 +6,8 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#if canImport(UIKit)
 import Foundation
-
 extension Date {
     
     /// 格式化时间
@@ -38,3 +38,4 @@ extension Date {
     }
     
 }
+#endif

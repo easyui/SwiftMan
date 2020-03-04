@@ -6,7 +6,9 @@
 //  Copyright © 2016年 yangjun zhu. All rights reserved.
 //
 
+#if canImport(AVFoundation)
 import AVFoundation
+
 extension AVAsset {
 
     public var m_title: String? {
@@ -96,3 +98,5 @@ extension AVAsset {
     }
 
 }
+
+#endif

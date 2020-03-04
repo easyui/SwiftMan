@@ -6,8 +6,8 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-import Foundation
-
+#if canImport(UIKit) && !os(watchOS)
+import UIKit
 
 extension UIImageView {
     
@@ -22,6 +22,7 @@ extension UIImageView {
         self.addSubview(blurEffectView)
         self.clipsToBounds = true
     }
-    
-    
 }
+
+#endif
+

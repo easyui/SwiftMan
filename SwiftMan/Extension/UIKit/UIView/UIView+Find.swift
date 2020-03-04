@@ -6,24 +6,22 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#if canImport(UIKit) && os(iOS)
 import UIKit
-
 
 extension UIView {
     
     
     /// 返回view依赖的viewController
-    public var m_viewController: UIViewController? {
-        get {
-            var responder = self as UIResponder
-            while let nextResponder = responder.next {
-                if (responder is UIViewController) {
-                    return (responder as! UIViewController)
-                }
-                responder = nextResponder
+    public var m_parentViewController: UIViewController? {
+        var responder = self as UIResponder
+        while let nextResponder = responder.next {
+            if let viewController = nextResponder as? UIViewController {
+                return viewController
             }
-            return nil
+            responder = nextResponder
         }
+        return nil
     }
     
     
@@ -70,7 +68,7 @@ extension UIView {
     }
     
     public func  m_findFirstResponder() -> UIView? {
-        if (self is UITextField || self is UITextView) && self.isFirstResponder{
+        if self.isFirstResponder {
             return self
         }
         for v: UIView in self.subviews {
@@ -85,3 +83,5 @@ extension UIView {
     
     
 }
+
+#endif

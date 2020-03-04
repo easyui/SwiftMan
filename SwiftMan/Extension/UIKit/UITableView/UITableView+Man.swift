@@ -6,7 +6,7 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 
@@ -25,12 +25,12 @@ extension UITableView{
         return m_indexPathForLastRow(inSection: m_lastSection)
     }
     
-    /// SwifterSwift: Index of last section in tableView.
+    /// SwiftMan: Index of last section in tableView.
     public var m_lastSection: Int {
         return numberOfSections > 0 ? numberOfSections - 1 : 0
     }
     
-    /// SwifterSwift: Number of all rows in all sections of tableView.
+    /// SwiftMan: Number of all rows in all sections of tableView.
     public var m_numberOfRows: Int {
         var section = 0
         var rowCount = 0
@@ -41,11 +41,11 @@ extension UITableView{
         return rowCount
     }
     
-   public func m_reloadData(_ completion:  (()->Void)? = nil) {
+    public func m_reloadData(_ completion: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: 0, animations: {
             self.reloadData()
-        }, completion: { _ in
-            completion?()
+        }, completion: { finished in
+            completion?(finished)
         })
     }
     
@@ -64,6 +64,18 @@ extension UITableView{
     
     public func m_scrollToTop(animated: Bool = true) {
         setContentOffset(CGPoint.zero, animated: animated)
+    }
+    
+    public func m_isValidIndexPath(_ indexPath: IndexPath) -> Bool {
+        return indexPath.section >= 0 &&
+            indexPath.row >= 0 &&
+            indexPath.section < numberOfSections &&
+            indexPath.row < numberOfRows(inSection: indexPath.section)
+    }
+    
+    public func safeScrollToRow(at indexPath: IndexPath, at scrollPosition: UITableView.ScrollPosition, animated: Bool) {
+        guard m_isValidIndexPath(indexPath) else { return }
+        scrollToRow(at: indexPath, at: scrollPosition, animated: animated)
     }
 }
 #endif

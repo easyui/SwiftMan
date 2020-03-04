@@ -7,11 +7,8 @@
 //
 
 
-#if os(macOS)
-    import Cocoa
-#else
-    import UIKit
-#endif
+#if canImport(UIKit)
+import UIKit
 
 
 // MARK: - Properties
@@ -35,12 +32,23 @@ extension Data {
 // MARK: - Methods
 extension Data {
     
-    /// SwifterSwift: String by encoding Data using the given encoding (if applicable).
+    /// SwiftMan: String by encoding Data using the given encoding (if applicable).
     ///
     /// - Parameter encoding: encoding.
     /// - Returns: String by encoding Data using the given encoding (if applicable).
-    public func m_string(encoding: String.Encoding) -> String? {
+    public func m_string(encoding: String.Encoding = String.Encoding.utf8) -> String? {
         return String(data: self, encoding: encoding)
     }
     
+    public func m_JSONObject(using: String.Encoding = .utf8, options: JSONSerialization.ReadingOptions =  [.mutableContainers,.mutableLeaves]) -> Any? {        
+        do {
+            let object = try JSONSerialization.jsonObject(with: self, options: options)
+            return object
+        } catch let aError as NSError {
+            print(aError)
+            return nil
+        }
+    }
+    
 }
+#endif

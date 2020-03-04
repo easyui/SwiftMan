@@ -6,10 +6,8 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
-
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
-
 
 extension UIViewController {
     
@@ -34,9 +32,15 @@ extension UIViewController {
     public class func m_currentViewControllerFromcurrentView() -> UIViewController? {
         var result: UIViewController? = nil
         // 1. get current window
+        #if targetEnvironment(macCatalyst)
+        guard var window = UIApplication.shared.windows.last else {
+            return nil
+        }
+        #else
         guard var window = UIApplication.shared.keyWindow else {
             return nil
         }
+        #endif
         if window.windowLevel != UIWindow.Level.normal {
             let windows = UIApplication.shared.windows
             for tmpWin in windows {
@@ -47,7 +51,7 @@ extension UIViewController {
             }
         }
         // 2. get current View Controller
-
+        
         result = window.rootViewController
         
         while let presentedVC = result?.presentedViewController {
@@ -60,7 +64,7 @@ extension UIViewController {
             result = (result as? UINavigationController)?.topViewController
         }
         return result
-
+        
     }
     
     public func m_isVisible() -> Bool {

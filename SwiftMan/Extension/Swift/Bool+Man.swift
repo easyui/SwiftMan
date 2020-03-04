@@ -6,8 +6,7 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-#if canImport(Foundation)
-import Foundation
+
 
 extension Bool {
     
@@ -38,4 +37,3 @@ extension Bool {
     
 }
 
-#endif

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
+#if canImport(UIKit) && os(iOS)
 import UIKit
-
 
 extension UIWindow {
     
@@ -29,3 +29,5 @@ extension UIWindow {
     }
     
 }
+
+#endif

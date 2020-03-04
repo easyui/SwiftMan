@@ -57,8 +57,9 @@
 		99B999791E27684200DBC4AA /* AVPlayer+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B999781E27684200DBC4AA /* AVPlayer+Man.swift */; };
 		99B9997E1E27BCBF00DBC4AA /* URLSession+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9997D1E27BCBF00DBC4AA /* URLSession+Man.swift */; };
 		99B9999F1E28C75600DBC4AA /* URLSession+SynchronousTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9999E1E28C75600DBC4AA /* URLSession+SynchronousTask.swift */; };
+		A681D12C240FA10A0020E927 /* CAGradientLayer+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A681D12B240FA10A0020E927 /* CAGradientLayer+Man.swift */; };
+		A681D12E240FF5580020E927 /* Collection+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A681D12D240FF5580020E927 /* Collection+Man.swift */; };
 		A6BF43DA1EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43D91EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift */; };
-		A6BF43DC1EFAB1DB00EEF7CF /* UIColor+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43DB1EFAB1DB00EEF7CF /* UIColor+Constant.swift */; };
 		A6BF43E01EFAC0EB00EEF7CF /* UIStoryboard+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43DF1EFAC0EB00EEF7CF /* UIStoryboard+Man.swift */; };
 		A6BF43E41EFAC28700EEF7CF /* CLLocation+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43E31EFAC28700EEF7CF /* CLLocation+Man.swift */; };
 		A6BF43EA1EFAC2C700EEF7CF /* CGColor+Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF43E91EFAC2C700EEF7CF /* CGColor+Man.swift */; };
@@ -145,8 +146,9 @@
 		99B999781E27684200DBC4AA /* AVPlayer+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Man.swift"; sourceTree = "<group>"; };
 		99B9997D1E27BCBF00DBC4AA /* URLSession+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Man.swift"; sourceTree = "<group>"; };
 		99B9999E1E28C75600DBC4AA /* URLSession+SynchronousTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+SynchronousTask.swift"; sourceTree = "<group>"; };
+		A681D12B240FA10A0020E927 /* CAGradientLayer+Man.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Man.swift"; sourceTree = "<group>"; };
+		A681D12D240FF5580020E927 /* Collection+Man.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Man.swift"; sourceTree = "<group>"; };
 		A6BF43D91EFA9D4400EEF7CF /* UIBarButtonItem+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Man.swift"; sourceTree = "<group>"; };
-		A6BF43DB1EFAB1DB00EEF7CF /* UIColor+Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Constant.swift"; sourceTree = "<group>"; };
 		A6BF43DF1EFAC0EB00EEF7CF /* UIStoryboard+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Man.swift"; sourceTree = "<group>"; };
 		A6BF43E31EFAC28700EEF7CF /* CLLocation+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Man.swift"; sourceTree = "<group>"; };
 		A6BF43E91EFAC2C700EEF7CF /* CGColor+Man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+Man.swift"; sourceTree = "<group>"; };
@@ -411,6 +413,22 @@
 			path = URLSession;
 			sourceTree = "<group>";
 		};
+		A681D129240FA0B70020E927 /* QuartzCore */ = {
+			isa = PBXGroup;
+			children = (
+				A681D12A240FA0C20020E927 /* CAGradientLayer */,
+			);
+			path = QuartzCore;
+			sourceTree = "<group>";
+		};
+		A681D12A240FA0C20020E927 /* CAGradientLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A681D12B240FA10A0020E927 /* CAGradientLayer+Man.swift */,
+			);
+			path = CAGradientLayer;
+			sourceTree = "<group>";
+		};
 		A6BF43D51EFA9BB000EEF7CF /* UIBarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,11 +582,12 @@
 			isa = PBXGroup;
 			children = (
 				DDED9EEC1CD9D10400E196EB /* Swift */,
+				DDA2A8A01CD6EDAF00AAAB8C /* Foundation */,
+				DDA2A8AA1CD6EDAF00AAAB8C /* UIKit */,
+				A681D129240FA0B70020E927 /* QuartzCore */,
 				99B9992A1E26077800DBC4AA /* AVFoundation */,
 				A6BF43E11EFAC26D00EEF7CF /* CoreLocation */,
 				DD6651291CD8E99800C81C38 /* CoreGraphics */,
-				DDA2A8A01CD6EDAF00AAAB8C /* Foundation */,
-				DDA2A8AA1CD6EDAF00AAAB8C /* UIKit */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -583,7 +602,6 @@
 				99B998F21E25E72500DBC4AA /* Data */,
 				99B998F51E25E93900DBC4AA /* Date */,
 				99B998FA1E25EA5F00DBC4AA /* NotificationCenter */,
-				99B999001E25EE0100DBC4AA /* String */,
 				99B999111E25EE5200DBC4AA /* Timer */,
 				99B999141E25EE5200DBC4AA /* URL */,
 			);
@@ -642,7 +660,6 @@
 			isa = PBXGroup;
 			children = (
 				DDA2A8AE1CD6EDAF00AAAB8C /* UIColor+Man.swift */,
-				A6BF43DB1EFAB1DB00EEF7CF /* UIColor+Constant.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -711,8 +728,10 @@
 		DDED9EEC1CD9D10400E196EB /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				99B999001E25EE0100DBC4AA /* String */,
 				DDED9EED1CD9D11800E196EB /* Bool+Man.swift */,
 				DDED9EFD1CDA0F0000E196EB /* Array+Man.swift */,
+				A681D12D240FF5580020E927 /* Collection+Man.swift */,
 				DDED9EFF1CDA0F1900E196EB /* Dictionary+Man.swift */,
 				99B999351E262EB000DBC4AA /* Int+Man.swift */,
 			);
@@ -888,16 +907,17 @@
 				DDED9EF01CD9D25800E196EB /* AppInfos.swift in Sources */,
 				99B999501E269B9700DBC4AA /* UIImageView+Man.swift in Sources */,
 				99B9992F1E26077800DBC4AA /* AVAsset+Man.swift in Sources */,
+				A681D12E240FF5580020E927 /* Collection+Man.swift in Sources */,
 				99B999061E25EE0100DBC4AA /* String+JSON.swift in Sources */,
 				DD3F99B81D257ACD0097F5D3 /* UIAlertController+Man.swift in Sources */,
 				99B998FC1E25EA5F00DBC4AA /* NotificationCenter+Man.swift in Sources */,
 				DDAEC86C1D3D1A210038F7EA /* UIViewController+Man.swift in Sources */,
 				DD6651321CD9103E00C81C38 /* NSObject+Man.swift in Sources */,
+				A681D12C240FA10A0020E927 /* CAGradientLayer+Man.swift in Sources */,
 				99B999161E25EE5200DBC4AA /* Timer+Addition.swift in Sources */,
 				99B9993C1E263B5B00DBC4AA /* UITextView+Man.swift in Sources */,
 				DDA2A8BB1CD6EDAF00AAAB8C /* UIApplication+Man.swift in Sources */,
 				99B999051E25EE0100DBC4AA /* String+Format.swift in Sources */,
-				A6BF43DC1EFAB1DB00EEF7CF /* UIColor+Constant.swift in Sources */,
 				9918CD141E5217F8000EC0A6 /* DayTimeCalculator.swift in Sources */,
 				DDA2A8BE1CD6EDAF00AAAB8C /* UIScreen+Man.swift in Sources */,
 				DDAEEA971D3C7C7000525126 /* UIView+Rect.swift in Sources */,
@@ -1090,6 +1110,7 @@
 				INFOPLIST_FILE = SwiftMan/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oukavip.it.SwiftMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1111,6 +1132,7 @@
 				INFOPLIST_FILE = SwiftMan/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oukavip.it.SwiftMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

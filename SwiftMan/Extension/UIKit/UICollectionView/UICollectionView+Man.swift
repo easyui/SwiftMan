@@ -6,34 +6,49 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit)
 import UIKit
 
-    extension UICollectionView {
+extension UICollectionView {
     
-    public func m_reloadData(_ completion:  (()->Void)? = nil) {
+    public func m_reloadData(_ completion: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: 0, animations: {
             self.reloadData()
-        }, completion: { _ in
-            completion?()
+        }, completion: { finished in
+            completion?(finished)
         })
     }
+    
+    public func m_safeScrollToItem(at indexPath: IndexPath, at scrollPosition: UICollectionView.ScrollPosition, animated: Bool) {
+         guard m_isValidIndexPath(indexPath) else {
+                 return
+         }
+         scrollToItem(at: indexPath, at: scrollPosition, animated: animated)
+     }
+    
+    public func m_isValidIndexPath(_ indexPath: IndexPath) -> Bool {
+         return indexPath.section >= 0 &&
+             indexPath.item >= 0 &&
+             indexPath.section < numberOfSections &&
+             indexPath.item < numberOfItems(inSection: indexPath.section)
+     }
 }
 
 
 extension UICollectionView {
     
-   	public func m_indexPathForLastItem(inSection section: Int) -> IndexPath? {
+    public func m_indexPathForLastItem(inSection section: Int) -> IndexPath? {
         guard section >= 0 else {
             return nil
         }
         guard section < numberOfSections else {
             return nil
         }
-        guard numberOfItems(inSection: section) > 0 else {
+        let numberOfRows = numberOfItems(inSection: section)
+        guard numberOfRows > 0 else {
             return IndexPath(item: 0, section: section)
         }
-        return IndexPath(item: numberOfItems(inSection: section) - 1, section: section)
+        return IndexPath(item: numberOfRows - 1, section: section)
     }
     
     public var m_indexPathForLastItem: IndexPath? {
@@ -53,5 +68,6 @@ extension UICollectionView {
         }
         return itemsCount
     }
+    
 }
 #endif

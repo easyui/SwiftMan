@@ -6,29 +6,8 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
-
-extension UIButton{
-    
-    public convenience init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, target: AnyObject, action: Selector) {
-        self.init(frame:CGRect(x: x, y: y, width: width, height: height), target:target,action:action,controlEvents:UIControl.Event.touchUpInside)
-    }
-    
-    
-    public convenience init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, target: AnyObject, action: Selector, controlEvents: UIControl.Event) {
-        self.init(frame:CGRect(x: x, y: y, width: width, height: height), target:target,action:action,controlEvents:controlEvents)
-    }
-    
-    public convenience init(frame: CGRect, target: AnyObject, action: Selector) {
-        self.init(frame:frame, target:target,action:action,controlEvents:UIControl.Event.touchUpInside)
-    }
-    
-    public convenience init(frame: CGRect, target: AnyObject, action: Selector, controlEvents: UIControl.Event) {
-        self.init(frame: frame)
-        addTarget(target, action: action, for: controlEvents)
-    }
-}
 
 extension UIButton{
     /// 设置按钮背景颜色
@@ -77,6 +56,16 @@ extension UIButton{
     /// - Parameter title: title string.
     public func m_setTitleForAllStates(_ title: String) {
         m_states.forEach { self.setTitle(title, for: $0) }
+    }
+    
+    /// SwiftMan: Center align title text and image on UIButton
+    ///
+    /// - Parameter spacing: spacing between UIButton title text and UIButton Image.
+    func m_centerTextAndImage(spacing: CGFloat) {
+        let insetAmount = spacing / 2
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: insetAmount)
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: -insetAmount)
+        contentEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: insetAmount)
     }
 }
 #endif

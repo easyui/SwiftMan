@@ -6,7 +6,9 @@
 //  Copyright © 2016年 yangjun zhu. All rights reserved.
 //
 
+#if canImport(AVFoundation)
 import AVFoundation
+
 extension AVPlayerItem {
 
     public var m_bufferDuration: TimeInterval? {
@@ -94,3 +96,5 @@ extension AVPlayerItem {
     }
 
 }
+
+#endif

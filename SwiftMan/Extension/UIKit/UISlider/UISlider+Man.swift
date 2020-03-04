@@ -6,7 +6,7 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-#if os(iOS)
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 

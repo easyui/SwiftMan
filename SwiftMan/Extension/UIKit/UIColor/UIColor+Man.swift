@@ -5,7 +5,8 @@
 //  Created by yangjun on 16/4/29.
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
-#if !os(macOS)
+
+#if canImport(UIKit)
 import UIKit
 
 extension UIColor {
@@ -48,8 +49,20 @@ extension UIColor {
         self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: alpha)
     }
     
-}
+    #if !os(watchOS)
+    /// SwiftMan: Create a UIColor with different colors for light and dark mode.
+    ///
+    /// - Parameters:
+    ///     - light: Color to use in light/unspecified mode.
+    ///     - dark: Color to use in dark mode.
+    @available(iOS 13.0, tvOS 13.0, *)
+    public convenience init(light: UIColor, dark: UIColor) {
+        self.init(dynamicProvider: { $0.userInterfaceStyle == .dark ? dark : light })
+    }
+    #endif
     
+}
+
 extension UIColor {    
     //  Returns random UIColor with random alpha(default: false)
     
@@ -92,7 +105,7 @@ extension UIColor {
     }
     
     
-    /// SwifterSwift: Hexadecimal value string (read-only). ex:UIColor.red.m_RGBHexString is #FF0000
+    /// SwiftMan: Hexadecimal value string (read-only). ex:UIColor.red.m_RGBHexString is #FF0000
     public var m_RGBHexString: String {
         return NSString(format:"#%06x", m_RGBHex).uppercased as String
     }
@@ -131,6 +144,7 @@ extension UIColor {
         getRed(nil, green: nil, blue: nil, alpha: &alpha)
         return alpha
     }
+    
     
     
     

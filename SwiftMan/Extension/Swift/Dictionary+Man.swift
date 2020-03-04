@@ -6,7 +6,7 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-import Foundation
+
 
 extension Dictionary {
     
@@ -14,23 +14,23 @@ extension Dictionary {
     ///
     /// - Returns: 可选的格式化的JSON字符串
     public func m_prettyJSONString() -> String?{
-        return JSONString(option: [.prettyPrinted])
+        return m_JSONString(option: [.prettyPrinted])
     }
     
     /// 转JSON
     ///
     /// - Returns: 可选的一行JSON字符串
     public func m_JSONStringRepresentation()  -> String?{
-        return JSONString(option: [])
+        return m_JSONString(option: [])
     }
     
     /// 转JSON
     ///
     /// - Returns: 可选的JSON字符串
-    private func JSONString(option: JSONSerialization.WritingOptions) -> String?{
+    public func m_JSONString(option: JSONSerialization.WritingOptions,encoding:String.Encoding = String.Encoding.utf8) -> String?{
         do{
             let data = try JSONSerialization.data(withJSONObject: self, options: option)
-            return  String(data: data, encoding: String.Encoding.utf8)
+            return  String(data: data, encoding: encoding)
         } catch {
             return nil
         }

@@ -6,23 +6,28 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
-#if os(macOS)
-    import Cocoa
-#else
-    import UIKit
+#if canImport(CoreGraphics)
+import CoreGraphics
+
+#if canImport(UIKit)
+import UIKit
+#endif
+
+#if canImport(AppKit)
+import AppKit
 #endif
 
 
 extension CGColor {
     
-    #if !os(macOS)
+    #if canImport(UIKit)
     /// SwiftMan: UIColor.
     public var m_UIColor: UIColor? {
         return UIColor(cgColor: self)
     }
     #endif
     
-    #if os(macOS)
+    #if canImport(AppKit) && !targetEnvironment(macCatalyst)
     /// SwiftMan: NSColor.
     public var m_NSColor: NSColor? {
     return NSColor(cgColor: self)
@@ -30,3 +35,5 @@ extension CGColor {
     #endif
     
 }
+
+#endif

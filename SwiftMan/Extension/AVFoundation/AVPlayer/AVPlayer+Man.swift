@@ -6,7 +6,9 @@
 //  Copyright © 2017年 cactus. All rights reserved.
 //
 
+#if canImport(AVFoundation)
 import AVFoundation
+
 extension AVPlayer {
     
     /// 观看了的时长（不包括暂停等）
@@ -33,4 +35,7 @@ extension AVPlayer {
         return CMTimeGetSeconds(self.currentTime())
     }
     
+    
 }
+
+#endif

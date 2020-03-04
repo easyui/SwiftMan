@@ -6,10 +6,8 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-import Foundation
-
-
-import UIKit
+#if canImport(CoreGraphics)
+import CoreGraphics
 
 extension CGRect {
     
@@ -50,3 +48,5 @@ extension CGRect {
     }
     
 }
+
+#endif

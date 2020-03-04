@@ -6,7 +6,7 @@
 //  Copyright © 2016年 yangjun. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
     
 extension UINavigationBar {
