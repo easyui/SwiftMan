@@ -10,10 +10,6 @@
 
 extension Bool {
     
-    @discardableResult public mutating func m_toggle() -> Bool {
-        self = !self
-        return self
-    }
 }
 
 
@@ -30,10 +26,6 @@ extension Bool {
         return description
     }
     
-    /// SwiftMan: Return inversed value of bool.
-    public var m_toggled: Bool {
-        return !self
-    }
     
 }
 
