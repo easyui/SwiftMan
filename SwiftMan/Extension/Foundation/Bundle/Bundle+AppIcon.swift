@@ -1,5 +1,5 @@
 //
-//  NSBundle+AppIcon.swift
+//  Bundle+AppIcon.swift
 //  SwiftMan
 //
 //  Created by yangjun on 16/5/4.

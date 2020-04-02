@@ -9,6 +9,18 @@
 import UIKit
 extension UIViewController {
     
+//    public final class func m_loadFromNib(nibName: String? = nil, bundle : Bundle? = nil) -> UIViewController {
+//        let className =  NSStringFromClass(Self.self)
+//        let classType = NSClassFromString(className) as! UIViewController.Type
+//        return classType.init(nibName: String(describing: Self.self), bundle: bundle)
+//    }
+    
+    public final class func m_loadFromNib<T:UIViewController>(nibName: String? = nil, bundle : Bundle? = nil) -> T {
+        let className =  NSStringFromClass(Self.self)
+        let classType = NSClassFromString(className) as! T.Type
+        return classType.init(nibName: String(describing: Self.self), bundle: bundle)
+    }
+    
     // MARK: - add / remove
     public func m_displayController(_ controller: UIViewController, frame: CGRect) {
         self.addChild(controller)
@@ -23,7 +35,7 @@ extension UIViewController {
         controller.removeFromParent()
     }
     
-
+    
     
     // MARK: - status bar
     public var  m_statusBarHeight: CGFloat {

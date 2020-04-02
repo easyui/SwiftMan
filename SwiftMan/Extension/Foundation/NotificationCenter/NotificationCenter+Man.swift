@@ -1,5 +1,5 @@
 //
-//  NSBundle+Man.swift
+//  Data+Man.swift
 //  SwiftMan
 //
 //  Created by yangjun on 16/5/3.
