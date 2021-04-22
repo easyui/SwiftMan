@@ -18,7 +18,7 @@ extension UIViewController {
     public final class func m_loadFromNib<T:UIViewController>(nibName: String? = nil, bundle : Bundle? = nil) -> T {
         let className =  NSStringFromClass(Self.self)
         let classType = NSClassFromString(className) as! T.Type
-        return classType.init(nibName: String(describing: Self.self), bundle: bundle)
+        return classType.init(nibName: nibName ?? String(describing: Self.self), bundle: bundle)
     }
     
     // MARK: - add / remove

@@ -79,8 +79,12 @@ extension UIView {
     ///   - named: xib的名字
     ///   - bundle: bundle，默认为空
     /// - Returns: view
-    public class func m_loadFromNib(named: String, bundle : Bundle? = nil) -> UIView? {
-        return UINib(nibName: named, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
+//    public class func m_loadFromNib(named: String, bundle : Bundle? = nil) -> UIView? {
+//        return UINib(nibName: named, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
+//    }
+    
+    public class func m_loadFromNib<T:UIView>(named: String? = nil, bundle : Bundle? = nil) -> T? {
+        return UINib(nibName: named ?? String(describing: Self.self), bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? T
     }
     
     /// 截图
