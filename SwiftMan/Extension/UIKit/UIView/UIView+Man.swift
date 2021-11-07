@@ -90,8 +90,8 @@ extension UIView {
     /// 截图
     ///
     /// - Returns: 截图
-    public func m_snapshotImage() -> UIImage?{
-        UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
+    public func m_snapshotImage(size: CGSize? = nil) -> UIImage?{
+        UIGraphicsBeginImageContextWithOptions(size ?? bounds.size, isOpaque, 0.0)
         defer {
             UIGraphicsEndImageContext()
         }
@@ -103,6 +103,13 @@ extension UIView {
 //        }
         let snapshotImage = UIGraphicsGetImageFromCurrentImageContext()
         return snapshotImage
+    }
+    
+    public func m_snapshotImageView(size: CGSize? = nil) -> UIImageView{
+        let tempSize = size ?? bounds.size
+        let imageView = UIImageView(image: m_snapshotImage(size: tempSize))
+        imageView.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: tempSize.width, height: tempSize.height)
+        return imageView
     }
     
     

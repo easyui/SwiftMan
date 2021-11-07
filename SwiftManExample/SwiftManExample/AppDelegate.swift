@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        TestViewController.m_loadFromNib()
+        print(NSStringFromClass(Self.self))
+        print(String(describing: Self.self))
+
+        print(type(of: self))
+        print(object_getClass(self))
+
         print(UIColor.red.m_RGBHexString)
         print(UIColor.red.m_RGBAHexString)
 

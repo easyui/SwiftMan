@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>compileBitcode</key>
+	<false/>
+	<key>destination</key>
+	<string>export</string>
+	<key>method</key>
+	<string>ad-hoc</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.iqiyi.rainbow</key>
+		<string>Rainbow_Adhoc</string>
+		<key>com.iqiyi.rainbow.NotificationSerivce</key>
+		<string>Rainbow_Adhoc_NotificationSerivce</string>
+	</dict>
+	<key>signingCertificate</key>
+	<string>2BB8205719F3B032EBD1F06384A59705375B0A0C</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>27A282F54N</string>
+	<key>thinning</key>
+	<string>&lt;none&gt;</string>
+</dict>
+</plist>
